@@ -1,0 +1,65 @@
+<!-- Allow inline math using $ and automatically break long math lines -->
+<!-- TeX: { equationNumbers: { autoNumber: "AMS" } } -->
+<!-- MathJax.Hub.Queue(
+        ["resetEquationNumbers", MathJax.InputJax.TeX],
+        ["PreProcess", MathJax.Hub],
+        ["Reprocess", MathJax.Hub]
+);-->
+<!--
+MathJax.InputJax.TeX.Definitions.Add({
+    macros: {
+      setCounter: "setCounter"
+    }
+  }, null, true);
+MathJax.InputJax.TeX.Parse.Augment({
+    setCounter: function(name) {
+      var num =  parseInt(this.GetArgument(name));
+      MathJax.Extension["TeX/AMSmath"].number = num;
+    }
+});
+<script type="text/x-mathjax-config">
+	MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+	   console.log(message[2].stack);  // message[2] is the error object
+	});
+	</script>
+-->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true,
+        processEnvironments: true
+    },
+    CommonHTML: {
+        linebreaks: {
+            automatic: true,
+        },
+    },
+    TeX: {
+      equationNumbers: { autoNumber: "AMS" , useLabelIds: true },
+      extensions: ["cancel.js", "AMSmath.js"]
+    }
+
+});
+
+MathJax.InputJax.TeX.Definitions.Add({
+    macros: {
+      setCounter: "setCounter"
+    }
+  }, null, true);
+MathJax.InputJax.TeX.Parse.Augment({
+    setCounter: function(name) {
+      var num =  parseInt(this.GetArgument(name));
+      MathJax.Extension["TeX/AMSmath"].number = num;
+      if (window.MathJax) {
+        MathJax.Hub.Queue(
+          ["resetEquationNumbers",MathJax.InputJax.TeX]
+        );
+      }
+    }
+});
+</script>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML' async></script>
