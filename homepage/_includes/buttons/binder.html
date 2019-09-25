@@ -1,9 +1,9 @@
 {% if site.use_binder_button %}
 
 {% if site.use_jupyterlab %}
-    {% assign binder_interact_prefix="urlpath=lab/tree/docs/" %}
+    {% assign binder_interact_prefix="urlpath=lab/tree/" %}
 {% else %}
-    {% assign binder_interact_prefix="filepath=/docs/" %}
+    {% assign binder_interact_prefix="filepath=" %}
 {% endif %}
 
 {% capture interact_url_binder %}v2/gh/{{ site.binder_repo_org }}/{{ site.binder_repo_name }}/{{ site.binder_repo_branch }}?{{ binder_interact_prefix }}{{ page.interact_link | url_encode }}{% endcapture %}

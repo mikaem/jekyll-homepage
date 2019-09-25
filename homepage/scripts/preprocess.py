@@ -5,42 +5,23 @@ from copy import copy
 
 book_root = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 
-files = ('chapter3/intro',
-         'chapter3/planeshearflow',
-         'chapter3/couette',
-         'chapter3/poiseuille',
-         'chapter3/similarity',
-         'chapter3/stokes',
-         'chapter4/intro',
-         'fenics/intro',
-         'fenics/nonlinear',
-         'mandatory/mandatory1',
-         'solutions/couette',
-         'solutions/poiseuille')
+files = list(os.walk('_site/research'))[0][2]
 
 def main():
     os.chdir(book_root)
 
     for f in files:
-        b = open('_build/{}.md'.format(f))
+        b = open('_site/research/{}'.format(f))
         bs = b.read()
         b.close()
+        bss = bs[bs.find('#References'):]
 
-        for ref in set(re.findall(r'\[([\w\d\s]*)\]\(([\w\d\s/.]*).ipynb#mjx-eqn-([\w\d:-]*)\)', bs)):
+        for ref in re.findall('(https://doi.org/10[.][0-9]{4,}[^\s"/<>]*/[^\s"<>]+)', bss):
             print(ref)
-            ref1 = ref[1].strip('.').lstrip('/') if '/' in ref[1] else f
-            bs = re.sub('\[%s\]\(%s.ipynb#mjx-eqn-%s\)'%(ref), '[%s](%s#mjx-eqn-%s)'%(ref[0], '/MEK4300-lecturenotes/'+ref1+'.html', ref[2]), bs)
+            bss = re.sub(ref, '<a href="{0}">{1}</a>'.format(ref, ref[16:]), bss)
 
-        for ref in set(re.findall(r'@anchor{([^{}]*)}', bs)):
-            print(ref)
-            bs = re.sub('@anchor{%s}'%(ref), '<a id="%s"></a>'%(ref), bs)
-
-        for ref in set(re.findall(r'\[([\w\d\s]*)\]\(([\w\d\s/..]*).ipynb#([\w\d-]*)\)', bs)):
-            print(ref)
-            ref1 = ref[1].strip('.').lstrip('/') if '/' in ref[1] else f
-            bs = re.sub(r'\[%s\]\(%s.ipynb#%s\)'%(ref), r'[%s](%s#%s)'%(ref[0], '/MEK4300-lecturenotes/'+ref1+'.html', ref[2].lower()), bs)
-
-        b = open('_build/{}.md'.format(f), 'w')
+        b = open('_site/research/{}'.format(f), 'w')
+        bs = bs[:bs.find('#References')] + bss
         b.write(bs)
         b.close()
 

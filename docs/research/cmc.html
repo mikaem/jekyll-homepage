@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>Turbulent Combustion</title>
-  <meta name="description" content="Turbulent Combustion">
+  <meta name="description" content="Turbulent Combustion For my PhDthesis, and subsequent year as Post Doc at the University of Sydney, Australia,I worked mostly with the Conditional Moment Clo...">
 
   <link rel="canonical" href="https://mikaem.github.io/jekyll-homepage/research/cmc.html">
   <link rel="alternate" type="application/rss+xml" title="Professor Mikael Mortensen" href="https://mikaem.github.io/jekyll-homepage/feed.xml">
@@ -16,24 +16,21 @@
   <meta property="og:url"         content="https://mikaem.github.io/jekyll-homepage/research/cmc.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="Turbulent Combustion" />
-<meta property="og:description" content="Turbulent Combustion" />
-<meta property="og:image"       content="" />
+<meta property="og:description" content="Turbulent Combustion For my PhDthesis, and subsequent year as Post Doc at the University of Sydney, Australia,I worked mostly with the Conditional Moment Clo..." />
+<meta property="og:image"       content="https://mikaem.github.io/jekyll-homepage/images/portrait_large.jpg" />
+
+<meta name="twitter:card" content="summary">
 
 
   <script type="application/ld+json">
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage":
-    "https://mikaem.github.io/jekyll-homepage/research/cmc.html",
-  "headline":
-    "Turbulent Combustion",
-  "datePublished":
-    "2019-09-24T19:22:24+02:00",
-  "dateModified":
-    "2019-09-24T19:22:24+02:00",
-  "description":
-    "Turbulent Combustion",
+  "mainEntityOfPage": "https://mikaem.github.io/jekyll-homepage/research/cmc.html",
+  "headline": "Turbulent Combustion",
+  "datePublished": "2019-09-25T17:33:12+02:00",
+  "dateModified": "2019-09-25T17:33:12+02:00",
+  "description": "Turbulent Combustion For my PhDthesis, and subsequent year as Post Doc at the University of Sydney, Australia,I worked mostly with the Conditional Moment Clo...",
   "author": {
     "@type": "Person",
     "name": "Mikael Mortensen"
@@ -59,15 +56,6 @@
   </script>
   <link rel="stylesheet" href="/jekyll-homepage/assets/css/styles.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css ">
-  <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
 
   <!-- <link rel="manifest" href="/manifest.json"> -->
   <!-- <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#efae0a"> -->
@@ -80,31 +68,8 @@
 
   <!-- MathJax Config -->
   <!-- Allow inline math using $ and automatically break long math lines -->
-<!-- TeX: { equationNumbers: { autoNumber: "AMS" } } -->
-<!-- MathJax.Hub.Queue(
-        ["resetEquationNumbers", MathJax.InputJax.TeX],
-        ["PreProcess", MathJax.Hub],
-        ["Reprocess", MathJax.Hub]
-);-->
-<!--
-MathJax.InputJax.TeX.Definitions.Add({
-    macros: {
-      setCounter: "setCounter"
-    }
-  }, null, true);
-MathJax.InputJax.TeX.Parse.Augment({
-    setCounter: function(name) {
-      var num =  parseInt(this.GetArgument(name));
-      MathJax.Extension["TeX/AMSmath"].number = num;
-    }
-});
-<script type="text/x-mathjax-config">
-	MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
-	   console.log(message[2].stack);  // message[2] is the error object
-	});
-	</script>
--->
-
+<!-- (mostly) copied from nbconvert configuration -->
+<!-- https://github.com/jupyter/nbconvert/blob/master/nbconvert/templates/html/mathjax.tpl -->
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -113,37 +78,16 @@ MathJax.Hub.Config({
         processEscapes: true,
         processEnvironments: true
     },
-    CommonHTML: {
-        linebreaks: {
-            automatic: true,
-        },
-    },
-    TeX: {
-      equationNumbers: { autoNumber: "AMS" , useLabelIds: true },
-      extensions: ["cancel.js", "AMSmath.js"]
-    }
-
-});
-
-MathJax.InputJax.TeX.Definitions.Add({
-    macros: {
-      setCounter: "setCounter"
-    }
-  }, null, true);
-MathJax.InputJax.TeX.Parse.Augment({
-    setCounter: function(name) {
-      var num =  parseInt(this.GetArgument(name));
-      MathJax.Extension["TeX/AMSmath"].number = num;
-      if (window.MathJax) {
-        MathJax.Hub.Queue(
-          ["resetEquationNumbers",MathJax.InputJax.TeX]
-        );
-      }
+    // Center justify equations in code and markdown cells. Elsewhere
+    // we use CSS to left justify single line equations in code cells.
+    displayAlign: 'center',
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}},
+        linebreaks: { automatic: true },
     }
 });
 </script>
-
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML' async></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML' async></script>
 
   <!-- DOM updating function -->
   <script>
@@ -172,19 +116,63 @@ initFunction = function(myfunc) {
   </script>
 
   <!-- Add AnchorJS to let headers be linked -->
-  <script src="/jekyll-homepage/assets/js/anchor.min.js"  type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js" async></script>
   <script>
+const initAnchors = () => {
+  if (window.anchors === undefined) {
+    setTimeout(initAnchors, 250)
+    return
+  }
+  anchors.add("main h1, main h2, main h3, main h4")
+}
 
-initFunction(function () {
-    anchors.add("main h1, main h2, main h3, main h4")
-});
-
+initFunction(initAnchors);
 </script>
 
+
   <!-- Include Turbolinks to make page loads fast -->
-  <!-- https://github.com/turbolinks/turbolinks
-  <script src="/jekyll-homepage/assets/js/turbolinks.js" async></script>
-  <meta name="turbolinks-cache-control" content="no-cache"> -->
+  <!-- https://github.com/turbolinks/turbolinks -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js" async></script>
+  <meta name="turbolinks-cache-control" content="no-cache">
+
+  <!-- Selectors for elements on the page -->
+  <script>
+/**
+ * Select various elements on the page for later use
+ */
+
+// IDs we'll attach to cells
+const codeCellId = index => `codecell${index}`
+const inputCellId = index => `inputcell${index}`
+
+pageElements = {}
+
+// All code cells
+findCodeCells = function() {
+    var codeCells = document.querySelectorAll('div.c-textbook__content > div.highlighter-rouge > div.highlight > pre, div.input_area pre, div.text_cell_render div.highlight pre')
+    pageElements['codeCells'] = codeCells;
+
+    codeCells.forEach((codeCell, index) => {
+      const id = codeCellId(index)
+      codeCell.setAttribute('id', id)
+    })
+};
+
+initFunction(findCodeCells);
+
+// All cells in general
+findInputCells = function() {
+    var inputCells = document.querySelectorAll('div.jb_cell')
+    pageElements['inputCells'] = inputCells;
+
+    inputCells.forEach((inputCell, index) => {
+        const id = inputCellId(index)
+        inputCell.setAttribute('id', id)
+    })
+};
+
+initFunction(findInputCells);
+</script>
 
   <!-- Load nbinteract for widgets -->
   
@@ -194,7 +182,6 @@ initFunction(function () {
 
 
 <!-- Display Thebelab button in each code cell -->
-
 <script>
 /**
  * Set up thebelab button for code blocks
@@ -208,7 +195,7 @@ const thebelabCellButton = id =>
 
 const addThebelabButtonToCodeCells =  () => {
 
-  const codeCells = document.querySelectorAll('div.input_area > div.highlighter-rouge:not(.output) pre')
+  const codeCells = document.querySelectorAll('div.input_area > div.highlight:not(.output) pre')
   codeCells.forEach((codeCell, index) => {
     const id = codeCellId(index)
     codeCell.setAttribute('id', id)
@@ -225,22 +212,7 @@ initFunction(addThebelabButtonToCodeCells);
 
 <script type="text/x-thebe-config">
     {
-      // Whether thebelab should automatically trigger the bootstrap upon page load
-      // if set to false, the page should contain some additional javascript
-      // responsible for triggering the javascript when desired (e.g. connected to a button click).
-      //bootstrap: true,
-
-      // arbitrary pre-render function called as part of bootstrap
-      //preRenderHook: true,
-
-      // Whether to request the kernel immediately when thebelab is bootstrapped
-      // instead of on executing code for the first time
       requestKernel: true,
-
-      // Whether thebelab should look for predefined output of cells before execution
-      // If this option is enabled and the next div after the cell has the attribute
-      // data-output=true (default), then the content of this div is rendered as output
-      predefinedOutput: true,
       binderOptions: {
         repo: 'mikaem/jekyll-homepage',
         ref: 'master',
@@ -253,7 +225,7 @@ initFunction(addThebelabButtonToCodeCells);
       }
     }
 </script>
-<script src="https://unpkg.com/thebelab@0.4.0/lib/index.js"></script>
+<script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script>
     /**
      * Add attributes to Thebelab blocks
@@ -339,9 +311,22 @@ initFunction(addThebelabButtonToCodeCells);
 
 
   <!-- Load the auto-generating TOC -->
-  <script src="/jekyll-homepage/assets/js/tocbot.min.js"  type="text/javascript"></script>
-  <script>
-var initToc = function () {
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js" async></script>
+<script>
+const initToc = () => {
+  if (window.tocbot === undefined) {
+    setTimeout(initToc, 250)
+    return
+  }
+
+  // Check whether we have any sidebar content. If not, then show the sidebar earlier.
+  var SIDEBAR_CONTENT_TAGS = ['.tag_full_width', '.tag_popout'];
+  var sidebar_content_query = SIDEBAR_CONTENT_TAGS.join(', ')
+  if (document.querySelectorAll(sidebar_content_query).length === 0) {
+    document.querySelector('nav.onthispage').classList.add('no_sidebar_content')
+  }
+
+  // Initialize the TOC bot
   tocbot.init({
     tocSelector: 'nav.onthispage',
     contentSelector: '.c-textbook__content',
@@ -352,163 +337,17 @@ var initToc = function () {
     activeListItemClass: "",  // Not using
     activeLinkClass: "", // Not using
   });
-  tocbot.refresh();
+
 }
 initFunction(initToc);
 </script>
+
 
   <!-- Google analytics -->
   <script src="/jekyll-homepage/assets/js/ga.js" async></script>
 
   <!-- Clipboard copy button -->
-  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" async></script>
-
-  <!-- Load JS that depends on site variables -->
-  <script>
-/**
- * Set up copy/paste for code blocks
- */
-const codeCellId = index => `codecell${index}`
-
-const clipboardButton = id =>
-  `<a id="copy-button-${id}" class="btn copybtn o-tooltip--left" data-tooltip="Copy" data-clipboard-target="#${id}">
-    <img src="/jekyll-homepage/assets/images/copy-button.svg" alt="Copy to clipboard">
-  </a>`
-
-// Clears selected text since ClipboardJS will select the text when copying
-const clearSelection = () => {
-  if (window.getSelection) {
-    window.getSelection().removeAllRanges()
-  } else if (document.selection) {
-    document.selection.empty()
-  }
-}
-
-// Changes tooltip text for two seconds, then changes it back
-const temporarilyChangeTooltip = (el, newText) => {
-  const oldText = el.getAttribute('data-tooltip')
-  el.setAttribute('data-tooltip', newText)
-  setTimeout(() => el.setAttribute('data-tooltip', oldText), 2000)
-}
-
-const addCopyButtonToCodeCells = () => {
-  // If ClipboardJS hasn't loaded, wait a bit and try again. This
-  // happens because we load ClipboardJS asynchronously.
-  if (window.ClipboardJS === undefined) {
-    setTimeout(addCopyButtonToCodeCells, 250)
-    return
-  }
-
-  const codeCells = document.querySelectorAll('div.c-textbook__content > div.highlighter-rouge > div.highlight > pre, div.input_area pre')
-  codeCells.forEach((codeCell, index) => {
-    const id = codeCellId(index)
-    codeCell.setAttribute('id', id)
-    if (document.getElementById("copy-button" + id) == null) {
-      codeCell.insertAdjacentHTML('afterend', clipboardButton(id));
-    }
-  })
-
-  const clipboard = new ClipboardJS('.copybtn')
-  clipboard.on('success', event => {
-    clearSelection()
-    temporarilyChangeTooltip(event.trigger, 'Copied!')
-  })
-
-  clipboard.on('error', event => {
-    temporarilyChangeTooltip(event.trigger, 'Failed to copy')
-  })
-
-  // Get rid of clipboard before the next page visit to avoid memory leak
-  document.addEventListener('turbolinks:before-visit', () =>
-    clipboard.destroy()
-  )
-}
-
-initFunction(addCopyButtonToCodeCells);
-</script>
-
-
-  <!-- Hide cell code -->
-  <script>
-    /**
-    Add buttons to hide code cells
-    */
-
-
-    var setCodeCellVisibility = function (inputField, kind) {
-        // Update the image and class for hidden
-        var id = inputField.getAttribute('data-id');
-        var codeCell = document.querySelector(`#${id} div.highlight`);
-
-        if (kind === "visible") {
-            codeCell.classList.remove('hidden');
-            inputField.checked = true;
-        } else {
-            codeCell.classList.add('hidden');
-            inputField.checked = false;
-        }
-    }
-
-    var toggleCodeCellVisibility = function (event) {
-        // The label is clicked, and now we decide what to do based on the input field's clicked status
-        if (event.target.tagName === "LABEL") {
-            var inputField = event.target.previousElementSibling;
-        } else {
-            // It is the span inside the target
-            var inputField = event.target.parentElement.previousElementSibling;
-        }
-
-        if (inputField.checked === true) {
-            setCodeCellVisibility(inputField, "visible");
-        } else {
-            setCodeCellVisibility(inputField, "hidden");
-        }
-    }
-
-
-    // Button constructor
-    const hideCodeButton = id => `<input class="hidebtn" type="checkbox" id="hidebtn${id}" data-id="${id}"><label title="Toggle cell" for="hidebtn${id}" class="plusminus"><span class="pm_h"></span><span class="pm_v"></span></label>`
-
-    var addHideButton = function () {
-        // If a hide button is already added, don't add another
-        if (document.querySelector('div.hidecode input') !== null) {
-            return;
-        }
-
-        // Find the input cells and add a hide button
-        document.querySelectorAll('div.input_area').forEach(function (item, index) {
-            if (!item.classList.contains("hidecode")) {
-                // Skip the cell if it doesn't have a hidecode class
-                return;
-            }
-
-            const id = codeCellId(index)
-            item.setAttribute('id', id);
-            // Insert the button just inside the end of the next div
-            item.querySelector('div').insertAdjacentHTML('beforeend', hideCodeButton(id))
-
-            // Set up the visibility toggle
-            hideLink = document.querySelector(`#${id} div.highlight + input + label`);
-            hideLink.addEventListener('click', toggleCodeCellVisibility)
-        });
-    }
-
-
-    // Initialize the hide buttos
-    var initHiddenCells = function () {
-        // Add hide buttons to the cells
-        addHideButton();
-
-        // Toggle the code cells that should be hidden
-        document.querySelectorAll('div.hidecode input').forEach(function (item) {
-            setCodeCellVisibility(item, 'hidden');
-            item.checked = true;
-        })
-    }
-
-    initFunction(initHiddenCells);
-
-</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script>
 
   <!-- Load custom website scripts -->
   <script src="/jekyll-homepage/assets/js/scripts.js" async></script>
@@ -521,7 +360,7 @@ initFunction(addCopyButtonToCodeCells);
   
 
   <!-- Lunr search code - will only be executed on the /search page -->
-  <script src="/jekyll-homepage/assets/js/lunr/lunr.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.6/lunr.min.js" async></script>
   <script>var initQuery = function() {
   // See if we have a search box
   var searchInput = document.querySelector('input#lunr_search');
@@ -607,6 +446,182 @@ initFunction(addCopyButtonToCodeCells);
 
 initFunction(initQuery);
 </script>
+
+  <!-- Load JS that depends on site variables -->
+  <script>
+/**
+ * Set up copy/paste for code blocks
+ */
+const clipboardButton = id =>
+  `<a id="copy-button-${id}" class="btn copybtn o-tooltip--left" data-tooltip="Copy" data-clipboard-target="#${id}">
+    <img src="/jekyll-homepage/assets/images/copy-button.svg" alt="Copy to clipboard">
+  </a>`
+
+// Clears selected text since ClipboardJS will select the text when copying
+const clearSelection = () => {
+  if (window.getSelection) {
+    window.getSelection().removeAllRanges()
+  } else if (document.selection) {
+    document.selection.empty()
+  }
+}
+
+// Changes tooltip text for two seconds, then changes it back
+const temporarilyChangeTooltip = (el, newText) => {
+  const oldText = el.getAttribute('data-tooltip')
+  el.setAttribute('data-tooltip', newText)
+  setTimeout(() => el.setAttribute('data-tooltip', oldText), 2000)
+}
+
+const addCopyButtonToCodeCells = () => {
+  // If ClipboardJS hasn't loaded, wait a bit and try again. This
+  // happens because we load ClipboardJS asynchronously.
+  if (window.ClipboardJS === undefined) {
+    setTimeout(addCopyButtonToCodeCells, 250)
+    return
+  }
+
+  pageElements['codeCells'].forEach((codeCell) => {
+    const id = codeCell.getAttribute('id')
+    if (document.getElementById("copy-button" + id) == null) {
+      codeCell.insertAdjacentHTML('afterend', clipboardButton(id));
+    }
+  })
+
+  const clipboard = new ClipboardJS('.copybtn')
+  clipboard.on('success', event => {
+    clearSelection()
+    temporarilyChangeTooltip(event.trigger, 'Copied!')
+  })
+
+  clipboard.on('error', event => {
+    temporarilyChangeTooltip(event.trigger, 'Failed to copy')
+  })
+
+  // Get rid of clipboard before the next page visit to avoid memory leak
+  document.addEventListener('turbolinks:before-visit', () =>
+    clipboard.destroy()
+  )
+}
+
+initFunction(addCopyButtonToCodeCells);
+</script>
+
+
+  <!-- Hide cell code -->
+  <script>
+    /**
+    Add buttons to hide code cells
+    */
+
+
+    var setCodeCellVisibility = function (inputField, kind) {
+        // Update the image and class for hidden
+        var id = inputField.getAttribute('data-id');
+        var codeCell = document.querySelector(`#${id} div.highlight`);
+
+        if (kind === "visible") {
+            codeCell.classList.remove('hidden');
+            inputField.checked = true;
+        } else {
+            codeCell.classList.add('hidden');
+            inputField.checked = false;
+        }
+    }
+
+    var toggleCodeCellVisibility = function (event) {
+        // The label is clicked, and now we decide what to do based on the input field's clicked status
+        if (event.target.tagName === "LABEL") {
+            var inputField = event.target.previousElementSibling;
+        } else {
+            // It is the span inside the target
+            var inputField = event.target.parentElement.previousElementSibling;
+        }
+
+        if (inputField.checked === true) {
+            setCodeCellVisibility(inputField, "visible");
+        } else {
+            setCodeCellVisibility(inputField, "hidden");
+        }
+    }
+
+
+    // Button constructor
+    const hideCodeButton = id => `<input class="hidebtn" type="checkbox" id="hidebtn${id}" data-id="${id}"><label title="Toggle cell" for="hidebtn${id}" class="plusminus"><span class="pm_h"></span><span class="pm_v"></span></label>`
+
+    var addHideButton = function () {
+        // If a hide button is already added, don't add another
+        if (document.querySelector('div.tag_hide_input input') !== null) {
+            return;
+        }
+
+        // Find the input cells and add a hide button
+        pageElements['inputCells'].forEach(function (inputCell) {
+            if (!inputCell.classList.contains("tag_hide_input")) {
+                // Skip the cell if it doesn't have a hidecode class
+                return;
+            }
+
+            const id = inputCell.getAttribute('id')
+
+            // Insert the button just inside the end of the next div
+            inputCell.querySelector('div.input').insertAdjacentHTML('beforeend', hideCodeButton(id))
+
+            // Set up the visibility toggle
+            hideLink = document.querySelector(`#${id} div.inner_cell + input + label`);
+            hideLink.addEventListener('click', toggleCodeCellVisibility)
+        });
+    }
+
+
+    // Initialize the hide buttos
+    var initHiddenCells = function () {
+        // Add hide buttons to the cells
+        addHideButton();
+
+        // Toggle the code cells that should be hidden
+        document.querySelectorAll('div.tag_hide_input input').forEach(function (item) {
+            setCodeCellVisibility(item, 'hidden');
+            item.checked = true;
+        })
+    }
+
+    initFunction(initHiddenCells);
+
+</script>
+
+  <!-- Printing the screen -->
+  <!-- Include nbinteract for interactive widgets -->
+<script src="https://printjs-4de6.kxcdn.com/print.min.js" async></script>
+<script>
+printContent = () => {
+    // MathJax displays a second version of any math for assistive devices etc.
+    // This prevents double-rendering in the PDF output.
+    var ignoreAssistList = [];
+    assistives = document.querySelectorAll('.MathJax_Display span.MJX_Assistive_MathML').forEach((element, index) => {
+        var thisId = 'MathJax-assistive-' + index.toString();
+        element.setAttribute('id', thisId);
+        ignoreAssistList.push(thisId)
+    });
+
+    // Print the actual content object
+    printJS({
+        printable: 'textbook_content',
+        type: 'html',
+        css: "/jekyll-homepage/assets/css/styles.css",
+        scanStyles: false,
+        targetStyles: ["*"],
+        ignoreElements: ignoreAssistList
+    })
+};
+
+initPrint = () => {
+    document.querySelector('#interact-button-print').addEventListener('click', printContent)
+}
+
+initFunction(initPrint)
+</script>
+
 </head>
 
   <body>
@@ -707,10 +722,6 @@ initFunction(initQuery);
     
       
       
-        <li class="c-sidebar__chapter"><a class="c-sidebar__entry" href="/jekyll-homepage/search.html">Search</a></li>
-        
-      
-      
         <li class="c-sidebar__divider"></li>
         
       
@@ -782,6 +793,27 @@ initFunction(initQuery);
     
       
       
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/jekyll-homepage/research/plasma.html"
+        >
+          
+          4DSpace
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
         <li><h2 class="c-sidebar__title">Teaching</li>
         
       
@@ -797,7 +829,49 @@ initFunction(initQuery);
           href="/jekyll-homepage/teaching/teaching.html"
         >
           
-          Teaching
+          Courses
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/jekyll-homepage/teaching/japan.html"
+        >
+          
+          Japan-Norway partnership program
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/jekyll-homepage/teaching/students.html"
+        >
+          
+          Students
         </a>
 
         
@@ -810,164 +884,79 @@ initFunction(initQuery);
 </nav>
 
       
-      <!-- Empty sidebar placeholder that we'll auto-fill with javascript -->
-      <aside class="sidebar__right">
-          <header><h4 class="nav__title"><i class="fa fa-list"></i>   On this page</h4></header>
-          <nav class="onthispage">
-          </nav>
-      </aside>
-      
-      <main class="c-textbook__page" tabindex="-1">
-          <div class="o-wrapper">
-            <div class="c-sidebar-toggle">
+      <div class="c-topbar" id="top-navbar">
   <!-- We show the sidebar by default so we use .is-active -->
-  <button
-    id="js-sidebar-toggle"
-    class="hamburger hamburger--arrowalt is-active"
-  >
-    <span class="hamburger-box">
-      <span class="hamburger-inner"></span>
-    </span>
-    <span class="c-sidebar-toggle__label">Toggle Sidebar</span>
-  </button>
+  <div class="c-topbar__buttons">
+    <button
+      id="js-sidebar-toggle"
+      class="hamburger hamburger--arrowalt is-active"
+    >
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <div class="buttons">
+
+
+  
+  
+  
+  
+
+
 </div>
 
-            
-<div class="buttons">
-
-
-
-
-
-
+  </div>
+  <!-- Empty sidebar placeholder that we'll auto-fill with javascript -->
+  <aside class="sidebar__right">
+    <header><h4 class="nav__title"><i class="fa fa-list"></i>   On this page</h4></header>
+    <nav class="onthispage">
+    </nav>
+  </aside>
+  <a href="/jekyll-homepage/search.html" class="topbar-right-button" id="search-button"><i class="fa fa-search"></i></a>
 </div>
 
+      <main class="c-textbook__page" tabindex="-1">
+            <div class="c-textbook__content" id="textbook_content">
+              <div class="jb_cell">
 
-            <div class="c-textbook__content">
-              <h1 id="turbulent-combustion">Turbulent Combustion</h1>
-
-<p>For my PhD
-thesis, and subsequent year as Post Doc at the University of Sydney, Australia,<br />
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Turbulent-Combustion">Turbulent Combustion<a class="anchor-link" href="#Turbulent-Combustion"> </a></h1><p>For my PhD
+thesis, and subsequent year as Post Doc at the University of Sydney, Australia,<br>
 I worked mostly with the <a href="http://www.sciencedirect.com/science/article/pii/S0360128599000064">Conditional Moment Closure</a> (CMC), a
 state-of-the-art model that is used to capture turbulence-chemistry
-interactions (e.g., <a href="#mortensen_ces">[mortensen_ces]</a>, <a href="#mortensen_ctm">[mortensen_ctm]</a>). From 2005-2006 I had the great honour of working with Prof. Robert W. Bilger as a Post Doctoral research fellow at the University of Sydney,
-Australia. In Sydney I worked on CMC for spray combustion <a href="#Mortensen_Bilger">[Mortensen_Bilger]</a> and a
+interactions (e.g., <a class="citation" href="#mortensen_ces">(Mortensen, 2004)</a>, <a class="citation" href="#mortensen_ctm">(Mortensen &amp; de Bruyn Kops, 2008)</a>. From 2005-2006 I had the great honour of working with Prof. Robert W. Bilger as a Post Doctoral research fellow at the University of Sydney,
+Australia. In Sydney I worked on CMC for spray combustion <a class="citation" href="#Mortensen_Bilger">(Mortensen &amp; Bilger, 2009)</a> and a
 version of my consistent turbulent mixer model
-<a href="#mortensen_pof">[mortensen_pof]</a> that I have called the
-presumed mapping function approach <a href="#Mortensen2006">[Mortensen2006]</a> <a href="#ahmad_2014">[ahmad_2014]</a>. The
+<a class="citation" href="#mortensen_pof">(Mortensen, 2005)</a> that I have called the
+presumed mapping function approach <a class="citation" href="#Mortensen2006">(Mortensen &amp; Andersson, 2006)</a> <a class="citation" href="#ahmad_2014">(Sayed, Mortensen, &amp; Wen, 2014)</a>. The
 presumed mapping functions have been implemented in the open source package
 <a href="http://launchpad.net/pmfpack">PMFpack</a>, available under a GNU Lesser General Public License.
  My work on CMC led to several papers in collaboration with <a href="https://mie.umass.edu/faculty/stephen-de-bruyn-kops">Prof. Steve de Bruyn
 Kops</a>, using very large Direct Numerical Simulations to validate
-turbulence-chemistry models <a href="#de2005conditional">[de2005conditional]</a>, <a href="#cha2006direct">[cha2006direct]</a>,
-<a href="#mortensen2007direct">[mortensen2007direct]</a>.</p>
+turbulence-chemistry models <a class="citation" href="#de2005conditional">(de Bruyn Kops &amp; Mortensen, 2005)</a>, <a class="citation" href="#cha2006direct">(Cha, de Bruyn Kops, &amp; Mortensen, 2006)</a>,
+<a class="citation" href="#mortensen2007direct">(Mortensen, de Bruyn Kops, &amp; Cha, 2007)</a>.</p>
+<h2 id="References">References<a class="anchor-link" href="#References"> </a></h2><p><ol class="bibliography"><li><span id="mortensen_ces">Mortensen, M. (2004). Implementation of a Conditional Moment Closure for Mixing Sensitive Reactions. <i>Chemical Engineering Science</i>, <i>59</i>(24), 5709–5723. <a href="https://doi.org/10.1016/j.ces.2004.05.009">10.1016/j.ces.2004.05.009</a></span></li>
+<li><span id="mortensen_ctm">Mortensen, M., &amp; de Bruyn Kops, S. M. (2008). Conditional Velocity Statistics in the Double Scalar Mixing Layer - a Mapping Closure Approach. <i>Combustion Theory and Modelling</i>, <i>12</i>(5), 929–941. <a href="https://doi.org/10.1080/13647830802109100">10.1080/13647830802109100</a></span></li>
+<li><span id="Mortensen_Bilger">Mortensen, M., &amp; Bilger, R. W. (2009). Derivation of the Conditional Moment Closure Equations for Spray Combustion. <i>Combustion and Flame</i>, <i>156</i>(1), 62–72. <a href="https://doi.org/10.1016/j.combustflame.2008.07.007">10.1016/j.combustflame.2008.07.007</a></span></li>
+<li><span id="mortensen_pof">Mortensen, M. (2005). Consistent Modeling of Scalar Mixing for Presumed, Multiple Parameter Probability Density Functions. <i>Physics of Fluids</i>, <i>17</i>(1), 018106. <a href="https://doi.org/10.1063/1.1829311">10.1063/1.1829311</a></span></li>
+<li><span id="Mortensen2006">Mortensen, M., &amp; Andersson, B. (2006). Presumed Mapping Functions for Eulerian Modelling of Turbulent Mixing. <i>Flow, Turbulence and Combustion</i>, <i>76</i>(2), 199–219. <a href="https://doi.org/10.1007/s10494-006-9011-0">10.1007/s10494-006-9011-0</a></span></li>
+<li><span id="ahmad_2014">Sayed, A. E., Mortensen, M., &amp; Wen, J. Z. (2014). Assessment of the Presumed Mapping Function Approach for the Stationary Laminar Flamelet Modelling of Reacting Double Scalar Mixing Layers. <i>Combustion Theory and Modelling</i>, <i>18</i>(4-5), 552–581. <a href="https://doi.org/10.1080/13647830.2014.939229">10.1080/13647830.2014.939229</a></span></li>
+<li><span id="de2005conditional">de Bruyn Kops, S. M., &amp; Mortensen, M. (2005). Conditional Mixing Statistics in a Self-Similar Scalar Mixing Layer. <i>Physics of Fluids</i>, <i>17</i>(9), 095107. <a href="https://doi.org/10.1063/1.2055467">10.1063/1.2055467</a></span></li>
+<li><span id="cha2006direct">Cha, C. M., de Bruyn Kops, S. M., &amp; Mortensen, M. (2006). Direct Numerical Simulations of the Double Scalar Mixing Layer. Part I: Passive Scalar Mixing and Dissipation. <i>Physics of Fluids</i>, <i>18</i>(6), 067106. <a href="https://doi.org/10.1063/1.2213887">10.1063/1.2213887</a></span></li>
+<li><span id="mortensen2007direct">Mortensen, M., de Bruyn Kops, S. M., &amp; Cha, C. M. (2007). Direct Numerical Simulations of the Double Scalar Mixing Layer: Part II: Reactive Scalars. <i>Combustion and Flame</i>, <i>149</i>(4), 392–408. <a href="https://doi.org/10.1016/j.combustflame.2007.03.001">10.1016/j.combustflame.2007.03.001</a></span></li></ol></p>
 
-<h3 id="references">References</h3>
+</div>
+</div>
+</div>
+</div>
 
-<ol>
-  <li>
-    <div id="mortensen_ces"></div>
-    <p><strong>M. Mortensen</strong>. 
- Implementation of a Conditional Moment Closure for Mixing Sensitive Reactions,
- <em>Chemical Engineering Science</em>,
- 59(24),
- pp. 5709-5723,
- <a href="http://dx.doi.org/10.1016/j.ces.2004.05.009">doi: 10.1016/j.ces.2004.05.009</a>,
- 2004,
- <a href="http://www.sciencedirect.com/science/article/pii/S0009250904002829">http://www.sciencedirect.com/science/article/pii/S0009250904002829</a>.</p>
-  </li>
-  <li>
-    <div id="mortensen_ctm"></div>
-    <p><strong>M. Mortensen and S. M. d. B. Kops</strong>. 
- Conditional Velocity Statistics in the Double Scalar Mixing Layer - a Mapping Closure Approach,
- <em>Combustion Theory and Modelling</em>,
- 12(5),
- pp. 929-941,
- <a href="http://dx.doi.org/10.1080/13647830802109100">doi: 10.1080/13647830802109100</a>,
- 2008,
- <a href="http://www.tandfonline.com/doi/abs/10.1080/13647830802109100">http://www.tandfonline.com/doi/abs/10.1080/13647830802109100</a>.</p>
-  </li>
-  <li>
-    <div id="Mortensen_Bilger"></div>
-    <p><strong>M. Mortensen and R. W. Bilger</strong>. 
- Derivation of the Conditional Moment Closure Equations for Spray Combustion,
- <em>Combustion and Flame</em>,
- 156(1),
- pp. 62-72,
- <a href="http://dx.doi.org/10.1016/j.combustflame.2008.07.007">doi: 10.1016/j.combustflame.2008.07.007</a>,
- 2009,
- <a href="http://www.sciencedirect.com/science/article/pii/S0010218008002319">http://www.sciencedirect.com/science/article/pii/S0010218008002319</a>.</p>
-  </li>
-  <li>
-    <div id="mortensen_pof"></div>
-    <p><strong>M. Mortensen</strong>. 
- Consistent Modeling of Scalar Mixing for Presumed, Multiple Parameter Probability Density Functions,
- <em>Physics of Fluids</em>,
- 17(1),
- pp. 018106,
- <a href="http://dx.doi.org/10.1063/1.1829311">doi: 10.1063/1.1829311</a>,
- 2005,
- <a href="http://dx.doi.org/10.1063/1.1829311">http://dx.doi.org/10.1063/1.1829311</a>.</p>
-  </li>
-  <li>
-    <div id="Mortensen2006"></div>
-    <p><strong>M. Mortensen and B. Andersson</strong>. 
- Presumed Mapping Functions for Eulerian Modelling of Turbulent Mixing,
- <em>Flow, Turbulence and Combustion</em>,
- 76(2),
- pp. 199-219,
- <a href="http://dx.doi.org/10.1007/s10494-006-9011-0">doi: 10.1007/s10494-006-9011-0</a>,
- 2006,
- <a href="https://doi.org/10.1007/s10494-006-9011-0">https://doi.org/10.1007/s10494-006-9011-0</a>.</p>
-  </li>
-  <li>
-    <div id="ahmad_2014"></div>
-    <p><strong>A. E. Sayed, M. Mortensen and J. Z. Wen</strong>. 
- Assessment of the Presumed Mapping Function Approach for the Stationary Laminar Flamelet Modelling of Reacting Double Scalar Mixing Layers,
- <em>Combustion Theory and Modelling</em>,
- 18(4-5),
- pp. 552-581,
- <a href="http://dx.doi.org/10.1080/13647830.2014.939229">doi: 10.1080/13647830.2014.939229</a>,
- 2014,
- <a href="http://dx.doi.org/10.1080/13647830.2014.939229">http://dx.doi.org/10.1080/13647830.2014.939229</a>.</p>
-  </li>
-  <li>
-    <div id="de2005conditional"></div>
-    <p><strong>S. M. d. B. Kops and M. Mortensen</strong>. 
- Conditional Mixing Statistics in a Self-Similar Scalar Mixing Layer,
- <em>Physics of Fluids</em>,
- 17(9),
- pp. 095107,
- <a href="http://dx.doi.org/10.1063/1.2055467">doi: 10.1063/1.2055467</a>,
- 2005,
- <a href="http://dx.doi.org/10.1063/1.2055467">http://dx.doi.org/10.1063/1.2055467</a>.</p>
-  </li>
-  <li>
-    <div id="cha2006direct"></div>
-    <p><strong>C. M. Cha, S. M. d. B. Kops and M. Mortensen</strong>. 
- Direct Numerical Simulations of the Double Scalar Mixing Layer. Part I: Passive Scalar Mixing and Dissipation,
- <em>Physics of Fluids</em>,
- 18(6),
- pp. 067106,
- <a href="http://dx.doi.org/10.1063/1.2213887">doi: 10.1063/1.2213887</a>,
- 2006,
- <a href="http://aip.scitation.org/doi/abs/10.1063/1.2213887">http://aip.scitation.org/doi/abs/10.1063/1.2213887</a>.</p>
-  </li>
-  <li>
-    <div id="mortensen2007direct"></div>
-    <p><strong>M. Mortensen, S. M. d. B. Kops and C. M. Cha</strong>. 
- Direct Numerical Simulations of the Double Scalar Mixing Layer: Part II: Reactive Scalars,
- <em>Combustion and flame</em>,
- 149(4),
- pp. 392-408,
- <a href="http://dx.doi.org/10.1016/j.combustflame.2007.03.001">doi: 10.1016/j.combustflame.2007.03.001</a>,
- 2007,
- <a href="http://www.sciencedirect.com/science/article/pii/S0010218007000648">http://www.sciencedirect.com/science/article/pii/S0010218007000648</a>.</p>
-  </li>
-</ol>
+ 
 
 
-              <nav class="c-page__nav">
+            </div>
+            <nav class="c-page__nav">
   
     
     <a id="js-page__nav__prev" class="c-page__nav__prev" href="/jekyll-homepage/research/biomedical.html">
@@ -977,17 +966,18 @@ turbulence-chemistry models <a href="#de2005conditional">[de2005conditional]</a>
 
   
     
-    <a id="js-page__nav__next" class="c-page__nav__next" href="/jekyll-homepage/teaching/teaching.html">
-      Teaching <span class="u-margin-right-tiny"></span> 〉
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/jekyll-homepage/research/plasma.html">
+      4DSpace <span class="u-margin-right-tiny"></span> 〉
     </a>
   
 </nav>
 
-            </div>
-          </div>
+            <footer>
+  <p class="footer">This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The Jupyter Book Community</a></p>
+</footer>
+
         </div>
       </main>
     </div>
-
   </body>
 </html>

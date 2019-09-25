@@ -6,22 +6,7 @@
 
 <script type="text/x-thebe-config">
     {
-      // Whether thebelab should automatically trigger the bootstrap upon page load
-      // if set to false, the page should contain some additional javascript
-      // responsible for triggering the javascript when desired (e.g. connected to a button click).
-      //bootstrap: true,
-
-      // arbitrary pre-render function called as part of bootstrap
-      //preRenderHook: true,
-
-      // Whether to request the kernel immediately when thebelab is bootstrapped
-      // instead of on executing code for the first time
       requestKernel: true,
-
-      // Whether thebelab should look for predefined output of cells before execution
-      // If this option is enabled and the next div after the cell has the attribute
-      // data-output=true (default), then the content of this div is rendered as output
-      predefinedOutput: true,
       binderOptions: {
         repo: '{{ site.binder_repo_org }}/{{ site.binder_repo_name }}',
         ref: '{{ site.binder_repo_branch }}',
@@ -34,7 +19,7 @@
       }
     }
 </script>
-<script src="https://unpkg.com/thebelab@0.4.0/lib/index.js"></script>
+<script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script>
     /**
      * Add attributes to Thebelab blocks

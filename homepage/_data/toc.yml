@@ -42,10 +42,6 @@
   external: true
   not_numbered: true
 
-# Adds a searchbar link
-- title: Search
-  search: true
-
 # Divider for meta-pages and content page
 - divider: true
 
@@ -65,10 +61,24 @@
   url: /research/cmc
   not_numbered: true
   expand_sections: true
+- title: 4DSpace
+  url: /research/plasma
+  not_numbered: true
+  expand_sections: true
 
 - header: Teaching
 
-- title: Teaching
+- title: Courses
   url: /teaching/teaching
+  not_numbered: true
+  expand_sections: true
+
+- title: Japan-Norway partnership program
+  url: /teaching/japan
+  not_numbered: true
+  expand_sections: true
+
+- title: Students
+  url: /teaching/students
   not_numbered: true
   expand_sections: true

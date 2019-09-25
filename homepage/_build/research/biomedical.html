@@ -1,0 +1,137 @@
+---
+interact_link: content/research/biomedical.ipynb
+kernel_name: python3
+has_widgets: false
+title: |-
+  Biomedical Flows
+prev_page:
+  url: /research/spectraldns.html
+  title: |-
+    SpectralDNS
+next_page:
+  url: /research/cmc.html
+  title: |-
+    Turbulent Combustion
+comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
+---
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Biomedical-flows">Biomedical flows<a class="anchor-link" href="#Biomedical-flows"> </a></h1>
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I have been working from 2012-2016 as an <a href="http://www.simula.no/people/mikaelmo">adjunct research scientist</a> at <a href="http://www.simula.no">Simula Research Laboratory</a>. Here I had the great honor to be working with the late
+<a href="https://hplgit.com/homepage">Prof. Hans Petter Langtangen</a>
+({% cite Valen-Sendstad2011 %}, {% cite Mortensen2016 %}, {% cite Mortensen2012_transitional %}, {% cite mortensen_2011_awr %}),
+at the <a href="http://cbc.simula.no/pub/">Center for Biomedical Computing</a>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell tag_popout">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="../images/fenics_logo.png" width="200"></p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>I have contributed quite a bit to the <a href="https://www.fenicsproject.org">FEniCS</a> project, and the incompressible Navier-Stokes solver <a href="https://github.com/mikaem/Oasis">Oasis</a> has been developed within the FEniCS framework. The solver has been developed for
+efficiency, with MPI, and it is written entirely in Python. The Oasis solver is documented in the
+<em>Computer Physics Communications paper</em>
+{% cite mortensen2015oasis %}, where we
+show that it may run as fast and accurate as the low-level finite volume
+C++ solvers OpenFOAM and CDP (Stanford).</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell tag_popout">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="../images/scalar_anim.gif" width="300" ></p>
+<p>Injected drug inside a CSF channel, computed using Oasis.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The Oasis solver has been used in a range of master theses (see <a href="teaching.html#sec:master">Teaching</a>).
+For one of my master students, Per Thomas Haga, the thesis led to a journal paper on injecting
+drugs in the Cerebrospinal fluid (CSF) {% cite haga_2017 %}. The animation on the right
+shows how an injected drug moves up and down inside the CSF channel. It can also
+be seen that, due to the very low diffusivity of the scalar drug, we modelled the
+scalar transport using Lagrangian particle tracking.</p>
+<p>I have been working quite a bit together with <a href="https://www.simula.no/people/kvs">Kristian Valen-Sendstad</a> at Simula, on different aspects of biomedical
+flows. Our simulations on intracranial aneurysms
+{% cite Valen-Sendstad2011 %}, actually reached the headlines of Norway's larges
+newspaper <a href="#vg">VG</a>, when we found a correlation between transition
+to turbulence and the risk of aneurysm rupture (more famously known as stroke).
+For this work I performed most of the simulations when still at <a href="https://www.ffi.no">FFI</a>.</p>
+<!-- dom:FIGURE: [figs/stroke.jpg, width=400] Headlines in norwegian newspaper VG, 5/11-2011. <div id="vg"></div> -->
+<!-- begin figure -->
+<div id="vg"></div>
+
+<p>Headlines in norwegian newspaper VG, 5/11-2011.</p>
+
+<img src="../images/stroke.jpg" width="400">
+
+<!-- end figure -->
+
+
+<p>More recently we have been studying transition and
+mesh sensitivity in the FDA nozzle benchmark. In {% cite Bergersen2018 %}
+we use both regular CFD and linear stability analysis to show that care must be
+taken when designing a CFD benchmark. Transition to turbulence can only
+come from a seed, or perturbation, and an ideal case like the FDA
+benchmark should not transtition at all unless some noise is added to the
+system. <a href="#lsa">Figure</a> is showing an unstable eigenmode in the FDA
+bechmark, showing that transition should in deed occur at the Reynolds
+number=3500. Here I have conducted the stability simulations using the
+<a href="http://users.monash.edu.au/~bburn/semtex.html">dog</a> linear stability
+analysis software package.</p>
+<!-- dom:FIGURE: [figs/rotated_separated_rainbow.png, width=800] Linear stability analysis of the FDA benchmark. Showing the most unstable eigenmode. <div id="lsa"></div> -->
+<!-- begin figure -->
+<div id="lsa"></div>
+
+<p>Linear stability analysis of the FDA benchmark. Showing the most unstable eigenmode.</p>
+
+<img src="../images/rotated_separated_rainbow.png" width="800">
+
+<!-- end figure -->
+
+
+<h2 id="References">References<a class="anchor-link" href="#References"> </a></h2><p>{% bibliography --cited %}</p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+

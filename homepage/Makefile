@@ -1,9 +1,9 @@
-.PHONY: help homepage clean serve
+.PHONY: help book clean serve
 
 help:
 	@echo "Please use 'make <target>' where <target> is one of:"
 	@echo "  install     to install the necessary dependencies for jupyter-book to build"
-	@echo "  homepage    to convert the `content/` folder into Jekyll markdown in `_build/`"
+	@echo "  book        to convert the content/ folder into Jekyll markdown in _build/"
 	@echo "  clean       to clean out site build files"
 	@echo "  runall      to run all notebooks in-place, capturing outputs with the notebook"
 	@echo "  serve       to serve the repository locally with Jekyll"
@@ -11,16 +11,14 @@ help:
 
 
 install:
-	gem install bundler
+	# Check to see whether bundler is already installed. If not, install it.
+	if [ hash bundler 2>/dev/null ]; then \
+	gem install bundler;\
+	fi
 	bundle install
 
-homepage:
-	jupyter-book build --overwrite ./
-	#python scripts/preprocess.py
-
-bookex:
-	jupyter-book build --execute --overwrite ./
-	#python scripts/preprocess.py
+book:
+	jupyter-book build ./
 
 runall:
 	jupyter-book run ./content
@@ -33,8 +31,6 @@ serve:
 
 build:
 	bundle exec jekyll build
+	python scripts/preprocess.py
 	touch _site/.nojekyll
 	cp -r _site/. ../docs/
-
-pdf:
-	python scripts/create_pdf.py

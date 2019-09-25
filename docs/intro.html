@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
   <title>About</title>
-  <meta name="description" content="Professor Mikael Mortensen’s homepage">
+  <meta name="description" content="Professor Mikael Mortensen's homepage Rayleigh-Bénard convection computed using spectralDNS.Welcome to my homepage! I work as a Professor in Fluid Mechanics ...">
 
   <link rel="canonical" href="https://mikaem.github.io/jekyll-homepage/intro.html">
   <link rel="alternate" type="application/rss+xml" title="Professor Mikael Mortensen" href="https://mikaem.github.io/jekyll-homepage/feed.xml">
@@ -16,24 +16,21 @@
   <meta property="og:url"         content="https://mikaem.github.io/jekyll-homepage/intro.html" />
 <meta property="og:type"        content="article" />
 <meta property="og:title"       content="About" />
-<meta property="og:description" content="Professor Mikael Mortensen’s homepage" />
-<meta property="og:image"       content="" />
+<meta property="og:description" content="Professor Mikael Mortensen's homepage Rayleigh-Bénard convection computed using spectralDNS.Welcome to my homepage! I work as a Professor in Fluid Mechanics ..." />
+<meta property="og:image"       content="https://mikaem.github.io/jekyll-homepage/images/portrait_large.jpg" />
+
+<meta name="twitter:card" content="summary">
 
 
   <script type="application/ld+json">
   {
   "@context": "http://schema.org",
   "@type": "NewsArticle",
-  "mainEntityOfPage":
-    "https://mikaem.github.io/jekyll-homepage/intro.html",
-  "headline":
-    "About",
-  "datePublished":
-    "2019-09-24T19:22:24+02:00",
-  "dateModified":
-    "2019-09-24T19:22:24+02:00",
-  "description":
-    "Professor Mikael Mortensen’s homepage",
+  "mainEntityOfPage": "https://mikaem.github.io/jekyll-homepage/intro.html",
+  "headline": "About",
+  "datePublished": "2019-09-25T17:33:12+02:00",
+  "dateModified": "2019-09-25T17:33:12+02:00",
+  "description": "Professor Mikael Mortensen's homepage Rayleigh-Bénard convection computed using spectralDNS.Welcome to my homepage! I work as a Professor in Fluid Mechanics ...",
   "author": {
     "@type": "Person",
     "name": "Mikael Mortensen"
@@ -59,15 +56,6 @@
   </script>
   <link rel="stylesheet" href="/jekyll-homepage/assets/css/styles.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css ">
-  <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
 
   <!-- <link rel="manifest" href="/manifest.json"> -->
   <!-- <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#efae0a"> -->
@@ -80,31 +68,8 @@
 
   <!-- MathJax Config -->
   <!-- Allow inline math using $ and automatically break long math lines -->
-<!-- TeX: { equationNumbers: { autoNumber: "AMS" } } -->
-<!-- MathJax.Hub.Queue(
-        ["resetEquationNumbers", MathJax.InputJax.TeX],
-        ["PreProcess", MathJax.Hub],
-        ["Reprocess", MathJax.Hub]
-);-->
-<!--
-MathJax.InputJax.TeX.Definitions.Add({
-    macros: {
-      setCounter: "setCounter"
-    }
-  }, null, true);
-MathJax.InputJax.TeX.Parse.Augment({
-    setCounter: function(name) {
-      var num =  parseInt(this.GetArgument(name));
-      MathJax.Extension["TeX/AMSmath"].number = num;
-    }
-});
-<script type="text/x-mathjax-config">
-	MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
-	   console.log(message[2].stack);  // message[2] is the error object
-	});
-	</script>
--->
-
+<!-- (mostly) copied from nbconvert configuration -->
+<!-- https://github.com/jupyter/nbconvert/blob/master/nbconvert/templates/html/mathjax.tpl -->
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -113,37 +78,16 @@ MathJax.Hub.Config({
         processEscapes: true,
         processEnvironments: true
     },
-    CommonHTML: {
-        linebreaks: {
-            automatic: true,
-        },
-    },
-    TeX: {
-      equationNumbers: { autoNumber: "AMS" , useLabelIds: true },
-      extensions: ["cancel.js", "AMSmath.js"]
-    }
-
-});
-
-MathJax.InputJax.TeX.Definitions.Add({
-    macros: {
-      setCounter: "setCounter"
-    }
-  }, null, true);
-MathJax.InputJax.TeX.Parse.Augment({
-    setCounter: function(name) {
-      var num =  parseInt(this.GetArgument(name));
-      MathJax.Extension["TeX/AMSmath"].number = num;
-      if (window.MathJax) {
-        MathJax.Hub.Queue(
-          ["resetEquationNumbers",MathJax.InputJax.TeX]
-        );
-      }
+    // Center justify equations in code and markdown cells. Elsewhere
+    // we use CSS to left justify single line equations in code cells.
+    displayAlign: 'center',
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}},
+        linebreaks: { automatic: true },
     }
 });
 </script>
-
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML' async></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML' async></script>
 
   <!-- DOM updating function -->
   <script>
@@ -172,19 +116,63 @@ initFunction = function(myfunc) {
   </script>
 
   <!-- Add AnchorJS to let headers be linked -->
-  <script src="/jekyll-homepage/assets/js/anchor.min.js"  type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js" async></script>
   <script>
+const initAnchors = () => {
+  if (window.anchors === undefined) {
+    setTimeout(initAnchors, 250)
+    return
+  }
+  anchors.add("main h1, main h2, main h3, main h4")
+}
 
-initFunction(function () {
-    anchors.add("main h1, main h2, main h3, main h4")
-});
-
+initFunction(initAnchors);
 </script>
 
+
   <!-- Include Turbolinks to make page loads fast -->
-  <!-- https://github.com/turbolinks/turbolinks
-  <script src="/jekyll-homepage/assets/js/turbolinks.js" async></script>
-  <meta name="turbolinks-cache-control" content="no-cache"> -->
+  <!-- https://github.com/turbolinks/turbolinks -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js" async></script>
+  <meta name="turbolinks-cache-control" content="no-cache">
+
+  <!-- Selectors for elements on the page -->
+  <script>
+/**
+ * Select various elements on the page for later use
+ */
+
+// IDs we'll attach to cells
+const codeCellId = index => `codecell${index}`
+const inputCellId = index => `inputcell${index}`
+
+pageElements = {}
+
+// All code cells
+findCodeCells = function() {
+    var codeCells = document.querySelectorAll('div.c-textbook__content > div.highlighter-rouge > div.highlight > pre, div.input_area pre, div.text_cell_render div.highlight pre')
+    pageElements['codeCells'] = codeCells;
+
+    codeCells.forEach((codeCell, index) => {
+      const id = codeCellId(index)
+      codeCell.setAttribute('id', id)
+    })
+};
+
+initFunction(findCodeCells);
+
+// All cells in general
+findInputCells = function() {
+    var inputCells = document.querySelectorAll('div.jb_cell')
+    pageElements['inputCells'] = inputCells;
+
+    inputCells.forEach((inputCell, index) => {
+        const id = inputCellId(index)
+        inputCell.setAttribute('id', id)
+    })
+};
+
+initFunction(findInputCells);
+</script>
 
   <!-- Load nbinteract for widgets -->
   
@@ -194,7 +182,6 @@ initFunction(function () {
 
 
 <!-- Display Thebelab button in each code cell -->
-
 <script>
 /**
  * Set up thebelab button for code blocks
@@ -208,7 +195,7 @@ const thebelabCellButton = id =>
 
 const addThebelabButtonToCodeCells =  () => {
 
-  const codeCells = document.querySelectorAll('div.input_area > div.highlighter-rouge:not(.output) pre')
+  const codeCells = document.querySelectorAll('div.input_area > div.highlight:not(.output) pre')
   codeCells.forEach((codeCell, index) => {
     const id = codeCellId(index)
     codeCell.setAttribute('id', id)
@@ -225,22 +212,7 @@ initFunction(addThebelabButtonToCodeCells);
 
 <script type="text/x-thebe-config">
     {
-      // Whether thebelab should automatically trigger the bootstrap upon page load
-      // if set to false, the page should contain some additional javascript
-      // responsible for triggering the javascript when desired (e.g. connected to a button click).
-      //bootstrap: true,
-
-      // arbitrary pre-render function called as part of bootstrap
-      //preRenderHook: true,
-
-      // Whether to request the kernel immediately when thebelab is bootstrapped
-      // instead of on executing code for the first time
       requestKernel: true,
-
-      // Whether thebelab should look for predefined output of cells before execution
-      // If this option is enabled and the next div after the cell has the attribute
-      // data-output=true (default), then the content of this div is rendered as output
-      predefinedOutput: true,
       binderOptions: {
         repo: 'mikaem/jekyll-homepage',
         ref: 'master',
@@ -253,7 +225,7 @@ initFunction(addThebelabButtonToCodeCells);
       }
     }
 </script>
-<script src="https://unpkg.com/thebelab@0.4.0/lib/index.js"></script>
+<script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script>
     /**
      * Add attributes to Thebelab blocks
@@ -339,9 +311,22 @@ initFunction(addThebelabButtonToCodeCells);
 
 
   <!-- Load the auto-generating TOC -->
-  <script src="/jekyll-homepage/assets/js/tocbot.min.js"  type="text/javascript"></script>
-  <script>
-var initToc = function () {
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js" async></script>
+<script>
+const initToc = () => {
+  if (window.tocbot === undefined) {
+    setTimeout(initToc, 250)
+    return
+  }
+
+  // Check whether we have any sidebar content. If not, then show the sidebar earlier.
+  var SIDEBAR_CONTENT_TAGS = ['.tag_full_width', '.tag_popout'];
+  var sidebar_content_query = SIDEBAR_CONTENT_TAGS.join(', ')
+  if (document.querySelectorAll(sidebar_content_query).length === 0) {
+    document.querySelector('nav.onthispage').classList.add('no_sidebar_content')
+  }
+
+  // Initialize the TOC bot
   tocbot.init({
     tocSelector: 'nav.onthispage',
     contentSelector: '.c-textbook__content',
@@ -352,163 +337,17 @@ var initToc = function () {
     activeListItemClass: "",  // Not using
     activeLinkClass: "", // Not using
   });
-  tocbot.refresh();
+
 }
 initFunction(initToc);
 </script>
+
 
   <!-- Google analytics -->
   <script src="/jekyll-homepage/assets/js/ga.js" async></script>
 
   <!-- Clipboard copy button -->
-  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js" async></script>
-
-  <!-- Load JS that depends on site variables -->
-  <script>
-/**
- * Set up copy/paste for code blocks
- */
-const codeCellId = index => `codecell${index}`
-
-const clipboardButton = id =>
-  `<a id="copy-button-${id}" class="btn copybtn o-tooltip--left" data-tooltip="Copy" data-clipboard-target="#${id}">
-    <img src="/jekyll-homepage/assets/images/copy-button.svg" alt="Copy to clipboard">
-  </a>`
-
-// Clears selected text since ClipboardJS will select the text when copying
-const clearSelection = () => {
-  if (window.getSelection) {
-    window.getSelection().removeAllRanges()
-  } else if (document.selection) {
-    document.selection.empty()
-  }
-}
-
-// Changes tooltip text for two seconds, then changes it back
-const temporarilyChangeTooltip = (el, newText) => {
-  const oldText = el.getAttribute('data-tooltip')
-  el.setAttribute('data-tooltip', newText)
-  setTimeout(() => el.setAttribute('data-tooltip', oldText), 2000)
-}
-
-const addCopyButtonToCodeCells = () => {
-  // If ClipboardJS hasn't loaded, wait a bit and try again. This
-  // happens because we load ClipboardJS asynchronously.
-  if (window.ClipboardJS === undefined) {
-    setTimeout(addCopyButtonToCodeCells, 250)
-    return
-  }
-
-  const codeCells = document.querySelectorAll('div.c-textbook__content > div.highlighter-rouge > div.highlight > pre, div.input_area pre')
-  codeCells.forEach((codeCell, index) => {
-    const id = codeCellId(index)
-    codeCell.setAttribute('id', id)
-    if (document.getElementById("copy-button" + id) == null) {
-      codeCell.insertAdjacentHTML('afterend', clipboardButton(id));
-    }
-  })
-
-  const clipboard = new ClipboardJS('.copybtn')
-  clipboard.on('success', event => {
-    clearSelection()
-    temporarilyChangeTooltip(event.trigger, 'Copied!')
-  })
-
-  clipboard.on('error', event => {
-    temporarilyChangeTooltip(event.trigger, 'Failed to copy')
-  })
-
-  // Get rid of clipboard before the next page visit to avoid memory leak
-  document.addEventListener('turbolinks:before-visit', () =>
-    clipboard.destroy()
-  )
-}
-
-initFunction(addCopyButtonToCodeCells);
-</script>
-
-
-  <!-- Hide cell code -->
-  <script>
-    /**
-    Add buttons to hide code cells
-    */
-
-
-    var setCodeCellVisibility = function (inputField, kind) {
-        // Update the image and class for hidden
-        var id = inputField.getAttribute('data-id');
-        var codeCell = document.querySelector(`#${id} div.highlight`);
-
-        if (kind === "visible") {
-            codeCell.classList.remove('hidden');
-            inputField.checked = true;
-        } else {
-            codeCell.classList.add('hidden');
-            inputField.checked = false;
-        }
-    }
-
-    var toggleCodeCellVisibility = function (event) {
-        // The label is clicked, and now we decide what to do based on the input field's clicked status
-        if (event.target.tagName === "LABEL") {
-            var inputField = event.target.previousElementSibling;
-        } else {
-            // It is the span inside the target
-            var inputField = event.target.parentElement.previousElementSibling;
-        }
-
-        if (inputField.checked === true) {
-            setCodeCellVisibility(inputField, "visible");
-        } else {
-            setCodeCellVisibility(inputField, "hidden");
-        }
-    }
-
-
-    // Button constructor
-    const hideCodeButton = id => `<input class="hidebtn" type="checkbox" id="hidebtn${id}" data-id="${id}"><label title="Toggle cell" for="hidebtn${id}" class="plusminus"><span class="pm_h"></span><span class="pm_v"></span></label>`
-
-    var addHideButton = function () {
-        // If a hide button is already added, don't add another
-        if (document.querySelector('div.hidecode input') !== null) {
-            return;
-        }
-
-        // Find the input cells and add a hide button
-        document.querySelectorAll('div.input_area').forEach(function (item, index) {
-            if (!item.classList.contains("hidecode")) {
-                // Skip the cell if it doesn't have a hidecode class
-                return;
-            }
-
-            const id = codeCellId(index)
-            item.setAttribute('id', id);
-            // Insert the button just inside the end of the next div
-            item.querySelector('div').insertAdjacentHTML('beforeend', hideCodeButton(id))
-
-            // Set up the visibility toggle
-            hideLink = document.querySelector(`#${id} div.highlight + input + label`);
-            hideLink.addEventListener('click', toggleCodeCellVisibility)
-        });
-    }
-
-
-    // Initialize the hide buttos
-    var initHiddenCells = function () {
-        // Add hide buttons to the cells
-        addHideButton();
-
-        // Toggle the code cells that should be hidden
-        document.querySelectorAll('div.hidecode input').forEach(function (item) {
-            setCodeCellVisibility(item, 'hidden');
-            item.checked = true;
-        })
-    }
-
-    initFunction(initHiddenCells);
-
-</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script>
 
   <!-- Load custom website scripts -->
   <script src="/jekyll-homepage/assets/js/scripts.js" async></script>
@@ -521,7 +360,7 @@ initFunction(addCopyButtonToCodeCells);
   
 
   <!-- Lunr search code - will only be executed on the /search page -->
-  <script src="/jekyll-homepage/assets/js/lunr/lunr.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.6/lunr.min.js" async></script>
   <script>var initQuery = function() {
   // See if we have a search box
   var searchInput = document.querySelector('input#lunr_search');
@@ -607,6 +446,182 @@ initFunction(addCopyButtonToCodeCells);
 
 initFunction(initQuery);
 </script>
+
+  <!-- Load JS that depends on site variables -->
+  <script>
+/**
+ * Set up copy/paste for code blocks
+ */
+const clipboardButton = id =>
+  `<a id="copy-button-${id}" class="btn copybtn o-tooltip--left" data-tooltip="Copy" data-clipboard-target="#${id}">
+    <img src="/jekyll-homepage/assets/images/copy-button.svg" alt="Copy to clipboard">
+  </a>`
+
+// Clears selected text since ClipboardJS will select the text when copying
+const clearSelection = () => {
+  if (window.getSelection) {
+    window.getSelection().removeAllRanges()
+  } else if (document.selection) {
+    document.selection.empty()
+  }
+}
+
+// Changes tooltip text for two seconds, then changes it back
+const temporarilyChangeTooltip = (el, newText) => {
+  const oldText = el.getAttribute('data-tooltip')
+  el.setAttribute('data-tooltip', newText)
+  setTimeout(() => el.setAttribute('data-tooltip', oldText), 2000)
+}
+
+const addCopyButtonToCodeCells = () => {
+  // If ClipboardJS hasn't loaded, wait a bit and try again. This
+  // happens because we load ClipboardJS asynchronously.
+  if (window.ClipboardJS === undefined) {
+    setTimeout(addCopyButtonToCodeCells, 250)
+    return
+  }
+
+  pageElements['codeCells'].forEach((codeCell) => {
+    const id = codeCell.getAttribute('id')
+    if (document.getElementById("copy-button" + id) == null) {
+      codeCell.insertAdjacentHTML('afterend', clipboardButton(id));
+    }
+  })
+
+  const clipboard = new ClipboardJS('.copybtn')
+  clipboard.on('success', event => {
+    clearSelection()
+    temporarilyChangeTooltip(event.trigger, 'Copied!')
+  })
+
+  clipboard.on('error', event => {
+    temporarilyChangeTooltip(event.trigger, 'Failed to copy')
+  })
+
+  // Get rid of clipboard before the next page visit to avoid memory leak
+  document.addEventListener('turbolinks:before-visit', () =>
+    clipboard.destroy()
+  )
+}
+
+initFunction(addCopyButtonToCodeCells);
+</script>
+
+
+  <!-- Hide cell code -->
+  <script>
+    /**
+    Add buttons to hide code cells
+    */
+
+
+    var setCodeCellVisibility = function (inputField, kind) {
+        // Update the image and class for hidden
+        var id = inputField.getAttribute('data-id');
+        var codeCell = document.querySelector(`#${id} div.highlight`);
+
+        if (kind === "visible") {
+            codeCell.classList.remove('hidden');
+            inputField.checked = true;
+        } else {
+            codeCell.classList.add('hidden');
+            inputField.checked = false;
+        }
+    }
+
+    var toggleCodeCellVisibility = function (event) {
+        // The label is clicked, and now we decide what to do based on the input field's clicked status
+        if (event.target.tagName === "LABEL") {
+            var inputField = event.target.previousElementSibling;
+        } else {
+            // It is the span inside the target
+            var inputField = event.target.parentElement.previousElementSibling;
+        }
+
+        if (inputField.checked === true) {
+            setCodeCellVisibility(inputField, "visible");
+        } else {
+            setCodeCellVisibility(inputField, "hidden");
+        }
+    }
+
+
+    // Button constructor
+    const hideCodeButton = id => `<input class="hidebtn" type="checkbox" id="hidebtn${id}" data-id="${id}"><label title="Toggle cell" for="hidebtn${id}" class="plusminus"><span class="pm_h"></span><span class="pm_v"></span></label>`
+
+    var addHideButton = function () {
+        // If a hide button is already added, don't add another
+        if (document.querySelector('div.tag_hide_input input') !== null) {
+            return;
+        }
+
+        // Find the input cells and add a hide button
+        pageElements['inputCells'].forEach(function (inputCell) {
+            if (!inputCell.classList.contains("tag_hide_input")) {
+                // Skip the cell if it doesn't have a hidecode class
+                return;
+            }
+
+            const id = inputCell.getAttribute('id')
+
+            // Insert the button just inside the end of the next div
+            inputCell.querySelector('div.input').insertAdjacentHTML('beforeend', hideCodeButton(id))
+
+            // Set up the visibility toggle
+            hideLink = document.querySelector(`#${id} div.inner_cell + input + label`);
+            hideLink.addEventListener('click', toggleCodeCellVisibility)
+        });
+    }
+
+
+    // Initialize the hide buttos
+    var initHiddenCells = function () {
+        // Add hide buttons to the cells
+        addHideButton();
+
+        // Toggle the code cells that should be hidden
+        document.querySelectorAll('div.tag_hide_input input').forEach(function (item) {
+            setCodeCellVisibility(item, 'hidden');
+            item.checked = true;
+        })
+    }
+
+    initFunction(initHiddenCells);
+
+</script>
+
+  <!-- Printing the screen -->
+  <!-- Include nbinteract for interactive widgets -->
+<script src="https://printjs-4de6.kxcdn.com/print.min.js" async></script>
+<script>
+printContent = () => {
+    // MathJax displays a second version of any math for assistive devices etc.
+    // This prevents double-rendering in the PDF output.
+    var ignoreAssistList = [];
+    assistives = document.querySelectorAll('.MathJax_Display span.MJX_Assistive_MathML').forEach((element, index) => {
+        var thisId = 'MathJax-assistive-' + index.toString();
+        element.setAttribute('id', thisId);
+        ignoreAssistList.push(thisId)
+    });
+
+    // Print the actual content object
+    printJS({
+        printable: 'textbook_content',
+        type: 'html',
+        css: "/jekyll-homepage/assets/css/styles.css",
+        scanStyles: false,
+        targetStyles: ["*"],
+        ignoreElements: ignoreAssistList
+    })
+};
+
+initPrint = () => {
+    document.querySelector('#interact-button-print').addEventListener('click', printContent)
+}
+
+initFunction(initPrint)
+</script>
+
 </head>
 
   <body>
@@ -707,10 +722,6 @@ initFunction(initQuery);
     
       
       
-        <li class="c-sidebar__chapter"><a class="c-sidebar__entry" href="/jekyll-homepage/search.html">Search</a></li>
-        
-      
-      
         <li class="c-sidebar__divider"></li>
         
       
@@ -782,6 +793,27 @@ initFunction(initQuery);
     
       
       
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/jekyll-homepage/research/plasma.html"
+        >
+          
+          4DSpace
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
         <li><h2 class="c-sidebar__title">Teaching</li>
         
       
@@ -797,7 +829,49 @@ initFunction(initQuery);
           href="/jekyll-homepage/teaching/teaching.html"
         >
           
-          Teaching
+          Courses
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/jekyll-homepage/teaching/japan.html"
+        >
+          
+          Japan-Norway partnership program
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/jekyll-homepage/teaching/students.html"
+        >
+          
+          Students
         </a>
 
         
@@ -810,42 +884,66 @@ initFunction(initQuery);
 </nav>
 
       
-      <!-- Empty sidebar placeholder that we'll auto-fill with javascript -->
-      <aside class="sidebar__right">
-          <header><h4 class="nav__title"><i class="fa fa-list"></i>   On this page</h4></header>
-          <nav class="onthispage">
-          </nav>
-      </aside>
-      
-      <main class="c-textbook__page" tabindex="-1">
-          <div class="o-wrapper">
-            <div class="c-sidebar-toggle">
+      <div class="c-topbar" id="top-navbar">
   <!-- We show the sidebar by default so we use .is-active -->
-  <button
-    id="js-sidebar-toggle"
-    class="hamburger hamburger--arrowalt is-active"
-  >
-    <span class="hamburger-box">
-      <span class="hamburger-inner"></span>
-    </span>
-    <span class="c-sidebar-toggle__label">Toggle Sidebar</span>
-  </button>
+  <div class="c-topbar__buttons">
+    <button
+      id="js-sidebar-toggle"
+      class="hamburger hamburger--arrowalt is-active"
+    >
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <div class="buttons">
+
+
+  
+  
+  
+  
+
+
 </div>
 
-            
-<div class="buttons">
-
-
-
-
-
-
+  </div>
+  <!-- Empty sidebar placeholder that we'll auto-fill with javascript -->
+  <aside class="sidebar__right">
+    <header><h4 class="nav__title"><i class="fa fa-list"></i>   On this page</h4></header>
+    <nav class="onthispage">
+    </nav>
+  </aside>
+  <a href="/jekyll-homepage/search.html" class="topbar-right-button" id="search-button"><i class="fa fa-search"></i></a>
 </div>
 
+      <main class="c-textbook__page" tabindex="-1">
+            <div class="c-textbook__content" id="textbook_content">
+              <div class="jb_cell">
 
-            <div class="c-textbook__content">
-              <h1 id="professor-mikael-mortensens-homepage">Professor Mikael Mortensen’s homepage</h1>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Professor-Mikael-Mortensen's-homepage">Professor Mikael Mortensen's homepage<a class="anchor-link" href="#Professor-Mikael-Mortensen's-homepage"> </a></h1>
+</div>
+</div>
+</div>
+</div>
 
+<div class="jb_cell tag_popout">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://raw.githack.com/spectralDNS/spectralutilities/master/movies/RB_200k_Warp.gif" width="300" /></p>
+<p><strong>Rayleigh-Bénard</strong> convection computed using <a href="https://github.com/spectralDNS/spectralDNS/blob/master/demo/RayleighBenard.py">spectralDNS</a>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>Welcome to my homepage! I work as a Professor in Fluid Mechanics at the <a href="http://mn.uio.no/math">Department of
 Mathematics, University of Oslo</a>. My primary interests
 are Computational Fluid Dynamics (CFD) and the many aspects of turbulent fluid
@@ -856,207 +954,156 @@ strategic research initiative, where we study instabilities and turbulence in
 the polar ionosphere. I am also a Python enthusiast and I use this language as
 often as possible in teaching and scientific computing.</p>
 
-<h2 id="recent-highlights">Recent highlights</h2>
+</div>
+</div>
+</div>
+</div>
 
-<ul>
-  <li>
-    <p>1/7 2019 <a href="https://doi.org/10.1016/j.ijheatfluidflow.2019.108437">Gas-liquid slug flow in a horizontal concentric annulus, a comparison of numerical simulations and experimental data</a> by Friedemann C, Mortensen M and Nossen J, accepted for publication in International Journal of Heat and Fluid Flow.</p>
-  </li>
-  <li>
-    <p>5/6 2019 <a href="https://iopscience.iop.org/article/10.1088/1361-6587/ab27ff/meta">Theory and simulations of spherical and cylindrical Langmuir probes in non-Maxwellian plasmas</a> by Darian, Marholm, Mortensen and Miloch accepted for publication in Plasma Physics and Controlled Fusion.</p>
-  </li>
-  <li>
-    <p>30/5 2019 <a href="https://ieeexplore.ieee.org/document/8734022">Impact of Miniaturized Fixed-Bias Multi-Needle Langmuir Probes on CubeSats</a> by Marholm, Darian, Marchand, Miloch and Mortensen accepted for publication in IEEE Transactions in Plasma Science.</p>
-  </li>
-  <li>
-    <p>3/4 2019 <a href="http://joss.theoj.org/papers/10.21105/joss.01340">mpi4py-fft: Parallel Fast Fourier Transforms with MPI for Python</a> by M Mortensen L Dalcin and D Keyes accepted for publication in the Journal of Open Source Software.</p>
-  </li>
-  <li>
-    <p>7/3 2019 “Numerical simulations of a dust grain in a flowing magnetized plasma” by D Darian, M Mortensen, W J Miloch, H Usui and Y Miyake accepted for publication in <a href="https://aip.scitation.org/journal/php">Physics of Plasmas</a></p>
-  </li>
-  <li>
-    <p>20/2 2019 <a href="https://arxiv.org/abs/1804.09536">Fast parallel multidimensional FFT using advanced MPI</a> by Lisandro Dalcin, Mikael Mortensen and David E. Keyes, accepted for publication by <a href="https://www.journals.elsevier.com/journal-of-parallel-and-distributed-computing">The Journal of Parallel and Distributed Computing</a>.</p>
-  </li>
-  <li>
-    <p>20/11 2018 <a href="https://joss.theoj.org/papers/43f64b8a0ef42408c72acead37717ec6">Shenfun: High performance spectral Galerkin computing platform</a> by M. Mortensen, accepted for publication in the Journal of Open Source Software.</p>
-  </li>
+<div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Recent-highlights">Recent highlights<a class="anchor-link" href="#Recent-highlights"> </a></h2><ul>
+<li><p>1/7 2019 <a href="https://doi.org/10.1016/j.ijheatfluidflow.2019.108437">Gas-liquid slug flow in a horizontal concentric annulus, a comparison of numerical simulations and experimental data</a> by Friedemann C, Mortensen M and Nossen J, accepted for publication in International Journal of Heat and Fluid Flow.</p>
+</li>
+<li><p>5/6 2019 <a href="https://iopscience.iop.org/article/10.1088/1361-6587/ab27ff/meta">Theory and simulations of spherical and cylindrical Langmuir probes in non-Maxwellian plasmas</a> by Darian, Marholm, Mortensen and Miloch accepted for publication in Plasma Physics and Controlled Fusion.</p>
+</li>
+<li><p>30/5 2019 <a href="https://ieeexplore.ieee.org/document/8734022">Impact of Miniaturized Fixed-Bias Multi-Needle Langmuir Probes on CubeSats</a> by Marholm, Darian, Marchand, Miloch and Mortensen accepted for publication in IEEE Transactions in Plasma Science.</p>
+</li>
+<li><p>3/4 2019 <a href="http://joss.theoj.org/papers/10.21105/joss.01340">mpi4py-fft: Parallel Fast Fourier Transforms with MPI for Python</a> by M Mortensen L Dalcin and D Keyes accepted for publication in the Journal of Open Source Software.</p>
+</li>
+<li><p>7/3 2019 "Numerical simulations of a dust grain in a flowing magnetized plasma" by D Darian, M Mortensen, W J Miloch, H Usui and Y Miyake accepted for publication in <a href="https://aip.scitation.org/journal/php">Physics of Plasmas</a></p>
+</li>
+<li><p>20/2 2019 <a href="https://arxiv.org/abs/1804.09536">Fast parallel multidimensional FFT using advanced MPI</a> by Lisandro Dalcin, Mikael Mortensen and David E. Keyes, accepted for publication by <a href="https://www.journals.elsevier.com/journal-of-parallel-and-distributed-computing">The Journal of Parallel and Distributed Computing</a>.</p>
+</li>
+<li><p>20/11 2018 <a href="https://joss.theoj.org/papers/43f64b8a0ef42408c72acead37717ec6">Shenfun: High performance spectral Galerkin computing platform</a> by M. Mortensen, accepted for publication in the Journal of Open Source Software.</p>
+</li>
+</ul>
+<h2 id="News">News<a class="anchor-link" href="#News"> </a></h2><ul>
+<li><p>16/9 2019 <a href="https://www.mn.uio.no/fysikk/english/research/projects/4dspace/education/04_japan-norway.html">10th Kobe-Oslo workshop on numerical simulations of rocket-plasma interactions</a> started in Oslo, Norway.</p>
+</li>
+<li><p>1/7 2019 <a href="https://doi.org/10.1016/j.ijheatfluidflow.2019.108437">Gas-liquid slug flow in a horizontal concentric annulus, a comparison of numerical simulations and experimental data</a> by Friedemann C, Mortensen M and Nossen J, accepted for publication in International Journal of Heat and Fluid Flow.</p>
+</li>
+<li><p>17/6 2019 <a href="https://www.mn.uio.no/fysikk/english/research/projects/4dspace/education/04_japan-norway.html">9th Kobe-Oslo workshop on numerical simulations of rocket-plasma interactions</a> started in Kobe, Japan.</p>
+</li>
+<li><p>5/6 2019 <a href="https://iopscience.iop.org/article/10.1088/1361-6587/ab27ff/meta">Theory and simulations of spherical and cylindrical Langmuir probes in non-Maxwellian plasmas</a> by Darian, Marholm, Mortensen and Miloch accepted for publication in Plasma Physics and Controlled Fusion.</p>
+</li>
+<li><p>30/5 2019 <a href="https://ieeexplore.ieee.org/document/8734022">Impact of Miniaturized Fixed-Bias Multi-Needle Langmuir Probes on CubeSats</a> by Marholm, Darian, Marchand, Miloch and Mortensen accepted for publication in IEEE Transactions in Plasma Science.</p>
+</li>
+<li><p>29/5 2019 I'm presenting Shenfun at the 11th International Conference on Scientific Computing and Applications, Xiamen, China.</p>
+</li>
+<li><p>28/5 2019 I'm teaching a 3-hour short course on Shenfun at the 11th International Conference on Scientific Computing and Applications, Xiamen, China.</p>
+</li>
+<li><p>13/5 2019 Diako Darian defended his PhD <a href="https://www.mn.uio.no/math/forskning/aktuelt/arrangementer/disputaser/2019/darian.html">thesis</a>!</p>
+</li>
+<li><p>8/5 2019 A demo for a coupled Navier Stokes solver for lid driven cavity published in shenfun <a href="https://github.com/spectralDNS/shenfun/blob/master/demo/NavierStokesDrivenCavity.py">NavierStokesDrivenCavity.py</a>.</p>
+</li>
+<li><p>3/4 2019 <a href="http://joss.theoj.org/papers/10.21105/joss.01340">mpi4py-fft: Parallel Fast Fourier Transforms with MPI for Python</a> by M Mortensen L Dalcin and D Keyes accepted for publication in the Journal of Open Source Software.</p>
+</li>
+<li><p>2/4 2019 Tormod Landet has submitted his PhD thesis!</p>
+</li>
+<li><p>20/2 2019 <a href="https://arxiv.org/abs/1804.09536">Fast parallel multidimensional FFT using advanced MPI</a> by Lisandro Dalcin, Mikael Mortensen and David E. Keyes, accepted for publication by <a href="https://www.journals.elsevier.com/journal-of-parallel-and-distributed-computing">The Journal of Parallel and Distributed Computing</a></p>
+</li>
+<li><p>7/3 2019 "Numerical simulations of a dust grain in a flowing magnetized plasma" by D Darian, M Mortensen, W J Miloch, H Usui and Y Miyake accepted for publication in <a href="https://aip.scitation.org/journal/php">Physics of Plasmas</a></p>
+</li>
+<li><p>31/1 2019 Diako Darian has submitted his PhD thesis!</p>
+</li>
+<li><p>3/1 2019 <a href="https://github.com/spectralDNS/shenfun">Shenfun</a> can now be used for two non-periodic directions. It is also now possible to solve coupled equations implicitly. See <a href="https://github.com/spectralDNS/shenfun/blob/master/demo/Stokes.py">Stokes demo</a>.</p>
+</li>
+<li><p>14/12 2018 <a href="https://www.mn.uio.no/fysikk/english/research/projects/4dspace/">4DSpace</a> extension approved by the faculty!</p>
+</li>
+<li><p>30/11 2018 <a href="https://anaconda.org/conda-forge/mpi4py-fft">mpi4py-fft</a> is now available for download from the <a href="https://conda-forge.org">conda-forge</a> channel.</p>
+</li>
+<li><p>20/11 2018 <a href="https://joss.theoj.org/papers/43f64b8a0ef42408c72acead37717ec6">Shenfun: High performance spectral Galerkin computing platform</a> by M. Mortensen, accepted for publication in the Journal of Open Source Software.</p>
+</li>
+<li><p>6/11 2018 New preprint published <a href="http://folk.uio.no/mikaem/preprints/marholm2018.pdf">A Novel Method for Circuits of Perfect Electric Conductors in Unstructured Particle–In–Cell Plasma–Object Interaction Simulations</a> by Marholm, Darian, Mortensen, Marchand and Miloch</p>
+</li>
+<li><p>6/11 2018 New preprint published <a href="http://folk.uio.no/mikaem/preprints/sigvald_ieee.pdf">Impact of Miniaturized Fixed-Bias Multi-Needle Langmuir Probes on CubeSats</a> by Marholm, Marchand, Darian, Miloch and Mortensen</p>
+</li>
+<li><p>25/10 2018 New preprint published <a href="https://arxiv.org/abs/1810.10197">More efficient time integration for Fourier pseudo-spectral DNS of incompressible turbulence</a> by Ketcheson, Mortensen, Parsani, Schilling</p>
+</li>
+<li><p>17/9 - 21/9 2018 <a href="http://www.mn.uio.no/fysikk/english/research/projects/4dspace/education/04_japan-norway.html">8th 4DSpace Numerical Workshop</a> in Oslo.</p>
+</li>
+<li><p>30/8 2018 <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/cnm.3150">The FDA Nozzle Benchmark: In Theory There Is No Difference Between Theory and Practice, But in Practice There Is</a> accepted for publication in <a href="https://onlinelibrary.wiley.com/journal/20407947">International Journal for Numerical Methods in Biomedical Engineering</a></p>
+</li>
+<li><p>8/8 - 10/8 2018 Christophe Henry, Post Doc at Observatoire de la Cote d'Azur, Laboratoire Lagrange is visiting for 3 days.</p>
+</li>
+<li><p>8/8 2018 Documentation for <a href="https://bitbucket.org/mpi4py/mpi4py-fft">mpi4py-fft</a> published on <a href="https://mpi4py-fft.readthedocs.io/en/latest/">readthedocs</a></p>
+</li>
+<li><p>2/8 2018 <a href="https://arxiv.org/abs/1609.09425">On the Singular Neumann Problem in Linear Elasticity</a> accepted for publication in <a href="https://onlinelibrary.wiley.com/journal/10991506">Numerical Linear Algebra with Applications</a></p>
+</li>
+<li><p>6/7 2018 Particles in UNstructured Cells <a href="https://github.com/puncproject/PUNC">PUNC</a> now openly available at github</p>
+</li>
+<li><p>2/7 2018 <a href="http://iopscience.iop.org/article/10.1088/1367-2630/aad066">Dynamic ion shadows behind finite-sized objects in collisionless magnetized plasma flows</a> accepted for publication by the New Journal of Physics</p>
+</li>
+<li><p>27/6 2018 <a href="https://arxiv.org/abs/1612.03574">Preconditioning trace coupled 3d-1d systems using fractional Laplacian</a> accepted for publication by Numerical Methods for Partial Differential Equations</p>
+</li>
+<li><p>17/6 2018 <a href="http://www.mn.uio.no/fysikk/english/research/projects/4dspace/education/04_japan-norway.html">7th 4DSpace Numerical Workshop</a> in Kobe, Japan.</p>
+</li>
+<li><p>7/6 2018 Anna Piterskaya defended her master thesis <em>Spectral investigation of annular flow</em></p>
+</li>
+<li><p>30/6 2018 Richard presented at <a href="http://www.org.kobe-u.ac.jp/15sctc/index.html">SCTC'18</a> conference. Title <em>Impact of miniaturized fixed-bias Multi-Needle Langmuir Probes on CubeSats</em>, with Richard Marchand, Sigvald Marholm, Diako Darian and Wojciech Miloch</p>
+</li>
+<li><p>4/6 2018 Peter Killingstad defended his master thesis <em>A study of dead water resistance Reynolds Averaged Navier Stokes simulations of a barge moving in stratified waters</em></p>
+</li>
+<li><p>1/6 2018 Karl Jacobsen defended his master thesis <em>The dead water phenomenon - A computational fluid dynamics study</em></p>
+</li>
+<li><p>26/4 2018 New preprint published <a href="https://arxiv.org/abs/1804.09536">Fast parallel multidimensional FFT using advanced MPI</a> by Lisandro Dalcin, Mikael Mortensen and David E. Keyes</p>
+</li>
+<li><p>25/4 2018 Submitted proposal to FRINATEK and ROMFORSKNING</p>
+</li>
+<li><p>15/2 2018 Sigvald Marholm presented a poster for the <a href="https://fenicsproject.org/fenics18/">FEniCS'18</a> conference <em>An Application of FEniCS: Particle–Mesh Modelling of Instruments in Ionospheric Plasma</em>, with Richard Marchand, Sigvald Marholm, Diako Darian and Wojciech Miloch</p>
+</li>
+<li><p>19/1 2018 Anders Utnes defended his master thesis <em>Computational Analysis of a Drag reducing Cone Grid - A finite volume simulation of the gecko's aerodynamic skin</em>.</p>
+</li>
+<li><p>6/11 2017 I talked at the <a href="https://www.aices.rwth-aachen.de/en/media-and-seminars/events/mortensen-seminar">I3MS Seminar Series of the Institute for Modeling and Simulation, RWTH Aachen University</a>.</p>
+</li>
+<li><p>23/10 2017 I presented <a href="http://slides.com/mikaelmortensen/deck-9-11">shenfun - automating the spectral Galerkin method</a> at the <a href="https://cseconf2017.simula.no">International Conference on Computational Science and Engineering</a></p>
+</li>
+<li><p>20/9 2017 <a href="http://stacks.iop.org/1402-4896/92/i=11/a=114006">Wake Potential of a Dust Particle in Magnetised Plasmas</a>, W. J. Miloch, D. Darian and M. Mortensen accepted for publication in Physica Scripta</p>
+</li>
+<li><p>18/9 2017 <a href="http://www.mn.uio.no/fysikk/english/research/projects/4dspace/education/04_japan-norway.html">6th 4DSpace Numerical Workshop</a> started in Oslo.</p>
+</li>
+<li><p>8/9 2017 Andreas Slyngstad defended his master thesis <em>Verification and Validation of a Monolithic Fluid-Structure Interaction Solver in FEniCS</em>.</p>
+</li>
+<li><p>14/8 2017 <a href="http://onlinelibrary.wiley.com/doi/10.1002/2017JA024284/full">Numerical simulations of a sounding rocket in ionospheric plasma: effects of magnetic field on the wake formation and rocket potential.</a> accepted for publication in the Journal of Geophysical Research: Space Physics</p>
+</li>
+<li><p>19/6 2017 <a href="http://www.mn.uio.no/fysikk/english/research/projects/4dspace/education/04_japan-norway.html">5th 4DSpace Numerical Workshop</a> started in Kobe, Japan.</p>
+</li>
+<li><p>19/6 2017 Guttorm Kvaal defended his master thesis <em>Numerical Simulations of Pharmaceutical Particles Depositing in the Human Respiratory System</em>.</p>
+</li>
+<li><p>15/6 2017 Jørgen Dyremyhr Tyvand defended his master thesis <em>Computational fluid dynamics simulations of gravity wave flows</em></p>
+</li>
+<li><p>14/6 2017 Tormod Landet presented <a href="http://easychair.org/smart-program/FEniCS%2717/2017-06-14.html">Slope Limiting of Divergence Free Discontinuous Galerkin Vector Fields in the Context of Two-Phase Flows</a> at <a href="https://fenicsproject.org/fenics17/">FEniCS'17</a></p>
+</li>
+<li><p>12/6 2017 Diako Darian presented <a href="http://easychair.org/smart-program/FEniCS%2717/2017-06-12.html">Kinetic simulation of plasma-object interaction with FEniCS</a> at <a href="https://fenicsproject.org/fenics17/">FEniCS'17</a></p>
+</li>
+<li><p>29/5 2017 Sebastian Gjertsen defended his master thesis <em>Development of a Verified and Validated Computational Framework for Fluid-Structure Interaction: Investigating Lifting Operators and Numerical Stability</em>.</p>
+</li>
+<li><p>24/5 2017 <a href="https://pccfd.kaust.edu.sa/speaker?si=4">I presented</a> the <a href="spectralDNS.html">spectralDNS</a> project at the Predictive Complex Computational Fluid Dynamics conference at KAUST.</p>
+</li>
+<li><p>12/5 2017 I presented <a href="spectralDNS.html#sec:shenfun">shenfun</a> at MekIT'17.</p>
+</li>
+<li><p>12/5 2017 Christopher Friedemann presented his work on two-phase annulus flow at MekIT'17.</p>
+</li>
+<li><p>17/3 2017 My first academic son, Miroslav Kuchta, defended his PhD thesis with flying colors!</p>
+</li>
+<li><p>15/3 2017 <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0173680">A numerical investigation of intrathecal isobaric drug dispersion within the cervical subarachnoid space</a> accepted for publication in PLOS ONE.</p>
+</li>
+<li><p>1/11 2016 <a href="http://epubs.siam.org/doi/abs/10.1137/15M1052822?journalCode=sjoce3">Preconditioners for Saddle Point Systems with Trace Constraints Coupling 2D and 1D Domains</a> published in SIAM Journal on Scientific Computing.</p>
+</li>
 </ul>
 
-<h2 id="news">News</h2>
+</div>
+</div>
+</div>
+</div>
 
-<ul>
-  <li>
-    <p>16/9 2019 <a href="https://www.mn.uio.no/fysikk/english/research/projects/4dspace/education/04_japan-norway.html">10th Kobe-Oslo workshop on numerical simulations of rocket-plasma interactions</a> started in Oslo, Norway.</p>
-  </li>
-  <li>
-    <p>1/7 2019 <a href="https://doi.org/10.1016/j.ijheatfluidflow.2019.108437">Gas-liquid slug flow in a horizontal concentric annulus, a comparison of numerical simulations and experimental data</a> by Friedemann C, Mortensen M and Nossen J, accepted for publication in International Journal of Heat and Fluid Flow.</p>
-  </li>
-  <li>
-    <p>17/6 2019 <a href="https://www.mn.uio.no/fysikk/english/research/projects/4dspace/education/04_japan-norway.html">9th Kobe-Oslo workshop on numerical simulations of rocket-plasma interactions</a> started in Kobe, Japan.</p>
-  </li>
-  <li>
-    <p>5/6 2019 <a href="https://iopscience.iop.org/article/10.1088/1361-6587/ab27ff/meta">Theory and simulations of spherical and cylindrical Langmuir probes in non-Maxwellian plasmas</a> by Darian, Marholm, Mortensen and Miloch accepted for publication in Plasma Physics and Controlled Fusion.</p>
-  </li>
-  <li>
-    <p>30/5 2019 <a href="https://ieeexplore.ieee.org/document/8734022">Impact of Miniaturized Fixed-Bias Multi-Needle Langmuir Probes on CubeSats</a> by Marholm, Darian, Marchand, Miloch and Mortensen accepted for publication in IEEE Transactions in Plasma Science.</p>
-  </li>
-  <li>
-    <p>29/5 2019 I’m presenting Shenfun at the 11th International Conference on Scientific Computing and Applications, Xiamen, China.</p>
-  </li>
-  <li>
-    <p>28/5 2019 I’m teaching a 3-hour short course on Shenfun at the 11th International Conference on Scientific Computing and Applications, Xiamen, China.</p>
-  </li>
-  <li>
-    <p>13/5 2019 Diako Darian defended his PhD <a href="https://www.mn.uio.no/math/forskning/aktuelt/arrangementer/disputaser/2019/darian.html">thesis</a>!</p>
-  </li>
-  <li>
-    <p>8/5 2019 A demo for a coupled Navier Stokes solver for lid driven cavity published in shenfun <a href="https://github.com/spectralDNS/shenfun/blob/master/demo/NavierStokesDrivenCavity.py">NavierStokesDrivenCavity.py</a>.</p>
-  </li>
-  <li>
-    <p>3/4 2019 <a href="http://joss.theoj.org/papers/10.21105/joss.01340">mpi4py-fft: Parallel Fast Fourier Transforms with MPI for Python</a> by M Mortensen L Dalcin and D Keyes accepted for publication in the Journal of Open Source Software.</p>
-  </li>
-  <li>
-    <p>2/4 2019 Tormod Landet has submitted his PhD thesis!</p>
-  </li>
-  <li>
-    <p>20/2 2019 <a href="https://arxiv.org/abs/1804.09536">Fast parallel multidimensional FFT using advanced MPI</a> by Lisandro Dalcin, Mikael Mortensen and David E. Keyes, accepted for publication by <a href="https://www.journals.elsevier.com/journal-of-parallel-and-distributed-computing">The Journal of Parallel and Distributed Computing</a></p>
-  </li>
-  <li>
-    <p>7/3 2019 “Numerical simulations of a dust grain in a flowing magnetized plasma” by D Darian, M Mortensen, W J Miloch, H Usui and Y Miyake accepted for publication in <a href="https://aip.scitation.org/journal/php">Physics of Plasmas</a></p>
-  </li>
-  <li>
-    <p>31/1 2019 Diako Darian has submitted his PhD thesis!</p>
-  </li>
-  <li>
-    <p>3/1 2019 <a href="https://github.com/spectralDNS/shenfun">Shenfun</a> can now be used for two non-periodic directions. It is also now possible to solve coupled equations implicitly. See <a href="https://github.com/spectralDNS/shenfun/blob/master/demo/Stokes.py">Stokes demo</a>.</p>
-  </li>
-  <li>
-    <p>14/12 2018 <a href="https://www.mn.uio.no/fysikk/english/research/projects/4dspace/">4DSpace</a> extension approved by the faculty!</p>
-  </li>
-  <li>
-    <p>30/11 2018 <a href="https://anaconda.org/conda-forge/mpi4py-fft">mpi4py-fft</a> is now available for download from the <a href="https://conda-forge.org">conda-forge</a> channel.</p>
-  </li>
-  <li>
-    <p>20/11 2018 <a href="https://joss.theoj.org/papers/43f64b8a0ef42408c72acead37717ec6">Shenfun: High performance spectral Galerkin computing platform</a> by M. Mortensen, accepted for publication in the Journal of Open Source Software.</p>
-  </li>
-  <li>
-    <p>6/11 2018 New preprint published <a href="http://folk.uio.no/mikaem/preprints/marholm2018.pdf">A Novel Method for Circuits of Perfect Electric Conductors in Unstructured Particle–In–Cell Plasma–Object Interaction Simulations</a> by Marholm, Darian, Mortensen, Marchand and Miloch</p>
-  </li>
-  <li>
-    <p>6/11 2018 New preprint published <a href="http://folk.uio.no/mikaem/preprints/sigvald_ieee.pdf">Impact of Miniaturized Fixed-Bias Multi-Needle Langmuir Probes on CubeSats</a> by Marholm, Marchand, Darian, Miloch and Mortensen</p>
-  </li>
-  <li>
-    <p>25/10 2018 New preprint published <a href="https://arxiv.org/abs/1810.10197">More efficient time integration for Fourier pseudo-spectral DNS of incompressible turbulence</a> by Ketcheson, Mortensen, Parsani, Schilling</p>
-  </li>
-  <li>
-    <p>17/9 - 21/9 2018 <a href="http://www.mn.uio.no/fysikk/english/research/projects/4dspace/education/04_japan-norway.html">8th 4DSpace Numerical Workshop</a> in Oslo.</p>
-  </li>
-  <li>
-    <p>30/8 2018 <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/cnm.3150">The FDA Nozzle Benchmark: In Theory There Is No Difference Between Theory and Practice, But in Practice There Is</a> accepted for publication in <a href="https://onlinelibrary.wiley.com/journal/20407947">International Journal for Numerical Methods in Biomedical Engineering</a></p>
-  </li>
-  <li>
-    <p>8/8 - 10/8 2018 Christophe Henry, Post Doc at Observatoire de la Cote d’Azur, Laboratoire Lagrange is visiting for 3 days.</p>
-  </li>
-  <li>
-    <p>8/8 2018 Documentation for <a href="https://bitbucket.org/mpi4py/mpi4py-fft">mpi4py-fft</a> published on <a href="https://mpi4py-fft.readthedocs.io/en/latest/">readthedocs</a></p>
-  </li>
-  <li>
-    <p>2/8 2018 <a href="https://arxiv.org/abs/1609.09425">On the Singular Neumann Problem in Linear Elasticity</a> accepted for publication in <a href="https://onlinelibrary.wiley.com/journal/10991506">Numerical Linear Algebra with Applications</a></p>
-  </li>
-  <li>
-    <p>6/7 2018 Particles in UNstructured Cells <a href="https://github.com/puncproject/PUNC">PUNC</a> now openly available at github</p>
-  </li>
-  <li>
-    <p>2/7 2018 <a href="http://iopscience.iop.org/article/10.1088/1367-2630/aad066">Dynamic ion shadows behind finite-sized objects in collisionless magnetized plasma flows</a> accepted for publication by the New Journal of Physics</p>
-  </li>
-  <li>
-    <p>27/6 2018 <a href="https://arxiv.org/abs/1612.03574">Preconditioning trace coupled 3d-1d systems using fractional Laplacian</a> accepted for publication by Numerical Methods for Partial Differential Equations</p>
-  </li>
-  <li>
-    <p>17/6 2018 <a href="http://www.mn.uio.no/fysikk/english/research/projects/4dspace/education/04_japan-norway.html">7th 4DSpace Numerical Workshop</a> in Kobe, Japan.</p>
-  </li>
-  <li>
-    <p>7/6 2018 Anna Piterskaya defended her master thesis <em>Spectral investigation of annular flow</em></p>
-  </li>
-  <li>
-    <p>30/6 2018 Richard presented at <a href="http://www.org.kobe-u.ac.jp/15sctc/index.html">SCTC’18</a> conference. Title <em>Impact of miniaturized fixed-bias Multi-Needle Langmuir Probes on CubeSats</em>, with Richard Marchand, Sigvald Marholm, Diako Darian and Wojciech Miloch</p>
-  </li>
-  <li>
-    <p>4/6 2018 Peter Killingstad defended his master thesis <em>A study of dead water resistance Reynolds Averaged Navier Stokes simulations of a barge moving in stratified waters</em></p>
-  </li>
-  <li>
-    <p>1/6 2018 Karl Jacobsen defended his master thesis <em>The dead water phenomenon - A computational fluid dynamics study</em></p>
-  </li>
-  <li>
-    <p>26/4 2018 New preprint published <a href="https://arxiv.org/abs/1804.09536">Fast parallel multidimensional FFT using advanced MPI</a> by Lisandro Dalcin, Mikael Mortensen and David E. Keyes</p>
-  </li>
-  <li>
-    <p>25/4 2018 Submitted proposal to FRINATEK and ROMFORSKNING</p>
-  </li>
-  <li>
-    <p>15/2 2018 Sigvald Marholm presented a poster for the <a href="https://fenicsproject.org/fenics18/">FEniCS’18</a> conference <em>An Application of FEniCS: Particle–Mesh Modelling of Instruments in Ionospheric Plasma</em>, with Richard Marchand, Sigvald Marholm, Diako Darian and Wojciech Miloch</p>
-  </li>
-  <li>
-    <p>19/1 2018 Anders Utnes defended his master thesis <em>Computational Analysis of a Drag reducing Cone Grid - A finite volume simulation of the gecko’s aerodynamic skin</em>.</p>
-  </li>
-  <li>
-    <p>6/11 2017 I talked at the <a href="https://www.aices.rwth-aachen.de/en/media-and-seminars/events/mortensen-seminar">I3MS Seminar Series of the Institute for Modeling and Simulation, RWTH Aachen University</a>.</p>
-  </li>
-  <li>
-    <p>23/10 2017 I presented <a href="http://slides.com/mikaelmortensen/deck-9-11">shenfun - automating the spectral Galerkin method</a> at the <a href="https://cseconf2017.simula.no">International Conference on Computational Science and Engineering</a></p>
-  </li>
-  <li>
-    <p>20/9 2017 <a href="http://stacks.iop.org/1402-4896/92/i=11/a=114006">Wake Potential of a Dust Particle in Magnetised Plasmas</a>, W. J. Miloch, D. Darian and M. Mortensen accepted for publication in Physica Scripta</p>
-  </li>
-  <li>
-    <p>18/9 2017 <a href="http://www.mn.uio.no/fysikk/english/research/projects/4dspace/education/04_japan-norway.html">6th 4DSpace Numerical Workshop</a> started in Oslo.</p>
-  </li>
-  <li>
-    <p>8/9 2017 Andreas Slyngstad defended his master thesis <em>Verification and Validation of a Monolithic Fluid-Structure Interaction Solver in FEniCS</em>.</p>
-  </li>
-  <li>
-    <p>14/8 2017 <a href="http://onlinelibrary.wiley.com/doi/10.1002/2017JA024284/full">Numerical simulations of a sounding rocket in ionospheric plasma: effects of magnetic field on the wake formation and rocket potential.</a> accepted for publication in the Journal of Geophysical Research: Space Physics</p>
-  </li>
-  <li>
-    <p>19/6 2017 <a href="http://www.mn.uio.no/fysikk/english/research/projects/4dspace/education/04_japan-norway.html">5th 4DSpace Numerical Workshop</a> started in Kobe, Japan.</p>
-  </li>
-  <li>
-    <p>19/6 2017 Guttorm Kvaal defended his master thesis <em>Numerical Simulations of Pharmaceutical Particles Depositing in the Human Respiratory System</em>.</p>
-  </li>
-  <li>
-    <p>15/6 2017 Jørgen Dyremyhr Tyvand defended his master thesis <em>Computational fluid dynamics simulations of gravity wave flows</em></p>
-  </li>
-  <li>
-    <p>14/6 2017 Tormod Landet presented <a href="http://easychair.org/smart-program/FEniCS%2717/2017-06-14.html">Slope Limiting of Divergence Free Discontinuous Galerkin Vector Fields in the Context of Two-Phase Flows</a> at <a href="https://fenicsproject.org/fenics17/">FEniCS’17</a></p>
-  </li>
-  <li>
-    <p>12/6 2017 Diako Darian presented <a href="http://easychair.org/smart-program/FEniCS%2717/2017-06-12.html">Kinetic simulation of plasma-object interaction with FEniCS</a> at <a href="https://fenicsproject.org/fenics17/">FEniCS’17</a></p>
-  </li>
-  <li>
-    <p>29/5 2017 Sebastian Gjertsen defended his master thesis <em>Development of a Verified and Validated Computational Framework for Fluid-Structure Interaction: Investigating Lifting Operators and Numerical Stability</em>.</p>
-  </li>
-  <li>
-    <p>24/5 2017 <a href="https://pccfd.kaust.edu.sa/speaker?si=4">I presented</a> the <a href="spectralDNS.html">spectralDNS</a> project at the Predictive Complex Computational Fluid Dynamics conference at KAUST.</p>
-  </li>
-  <li>
-    <p>12/5 2017 I presented <a href="spectralDNS.html#sec:shenfun">shenfun</a> at MekIT’17.</p>
-  </li>
-  <li>
-    <p>12/5 2017 Christopher Friedemann presented his work on two-phase annulus flow at MekIT’17.</p>
-  </li>
-  <li>
-    <p>17/3 2017 My first academic son, Miroslav Kuchta, defended his PhD thesis with flying colors!</p>
-  </li>
-  <li>
-    <p>15/3 2017 <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0173680">A numerical investigation of intrathecal isobaric drug dispersion within the cervical subarachnoid space</a> accepted for publication in PLOS ONE.</p>
-  </li>
-  <li>
-    <p>1/11 2016 <a href="http://epubs.siam.org/doi/abs/10.1137/15M1052822?journalCode=sjoce3">Preconditioners for Saddle Point Systems with Trace Constraints Coupling 2D and 1D Domains</a> published in SIAM Journal on Scientific Computing.</p>
-  </li>
-</ul>
+ 
 
 
-              <nav class="c-page__nav">
+            </div>
+            <nav class="c-page__nav">
   
     
     <a id="js-page__nav__prev" class="c-page__nav__prev" href="">
@@ -1072,11 +1119,12 @@ often as possible in teaching and scientific computing.</p>
   
 </nav>
 
-            </div>
-          </div>
+            <footer>
+  <p class="footer">This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The Jupyter Book Community</a></p>
+</footer>
+
         </div>
       </main>
     </div>
-
   </body>
 </html>
