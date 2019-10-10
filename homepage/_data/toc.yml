@@ -22,7 +22,7 @@
 # See the links below for an example.
 
 # Top-level page
-- title: About
+- title: Home
   url: /intro
   not_numbered: true
 
@@ -63,6 +63,14 @@
   expand_sections: true
 - title: 4DSpace
   url: /research/plasma
+  not_numbered: true
+  expand_sections: true
+- title: Numerical methods
+  url: /research/numerical
+  not_numbered: true
+  expand_sections: true
+- title: Multiphase flow
+  url: /research/multiphase
   not_numbered: true
   expand_sections: true
 

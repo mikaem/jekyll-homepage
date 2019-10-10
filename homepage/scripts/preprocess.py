@@ -20,6 +20,14 @@ def main():
             print(ref)
             bss = re.sub(ref, '<a href="{0}">{1}</a>'.format(ref, ref[16:]), bss)
 
+        for ref in re.findall('https://arxiv.org/abs/[0-9]{4,}.[0-9]{5,}', bss):
+            print(ref)
+            bss = re.sub(ref, '<a href="{0}">{0}</a>'.format(ref), bss)
+
+        for ref in re.findall('https://folk.uio.no/mikaem/preprints/[\w\d]*.pdf', bss):
+            print(ref)
+            bss = re.sub(ref, '<a href="{0}">{1}</a>'.format(ref, ref[37:]), bss)
+
         b = open('_site/research/{}'.format(f), 'w')
         bs = bs[:bs.find('#References')] + bss
         b.write(bs)
