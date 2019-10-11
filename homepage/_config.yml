@@ -23,9 +23,10 @@ email: mikaem@math.uio.no
 description: >-
   My personal and professional homepage
 
-baseurl: /jekyll-homepage               # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
+baseurl: /mikaem               # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
 #baseurl: ""
-url: https://mikaem.github.io              # the base hostname & protocol for your site, e.g. http://example.com
+#url: https://mikaem.github.io              # the base hostname & protocol for your site, e.g. http://example.com
+url: http://folk.uio.no              # the base hostname & protocol for your site, e.g. http://example.com
 
 
 
@@ -68,7 +69,7 @@ binderhub_url: https://mybinder.org                        # The URL for your Bi
 binder_repo_base: https://github.com/                     # The site on which the textbook repository is hosted
 binder_repo_org: mikaem                     # The username or organization that owns this repository
 binder_repo_name: jekyll-homepage                        # The name of the repository on the web
-binder_repo_branch: master                   # The branch on which your textbook is hosted.
+binder_repo_branch: binder                   # The branch on which your textbook is hosted.
 binderhub_interact_text: Binder              # The text that interact buttons will contain.
 
 

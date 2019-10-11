@@ -18,7 +18,7 @@ install:
 	bundle install
 
 book:
-	jupyter-book build ./
+	jupyter-book build --overwrite ./
 
 runall:
 	jupyter-book run ./content
@@ -32,5 +32,4 @@ serve:
 build:
 	bundle exec jekyll build
 	python scripts/preprocess.py
-	touch _site/.nojekyll
-	cp -r _site/. ../docs/
+	rsync -au _site/ mikaem@abacus-as.uio.no:~/www_docs/

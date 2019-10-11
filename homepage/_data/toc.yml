@@ -74,6 +74,12 @@
   not_numbered: true
   expand_sections: true
 
+- header: Resources
+
+- title: Codes
+  url: resources/codes
+  not_numbered: true
+
 - header: Teaching
 
 - title: Courses
