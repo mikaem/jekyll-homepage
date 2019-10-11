@@ -3,6 +3,4 @@ channels:
   - conda-forge
 dependencies:
   - shenfun
-  - pip
-  - pip:
-    - -r ../requirements.txt
+  - matplotlib
