@@ -5,16 +5,20 @@ has_widgets: false
 title: |-
   SpectralDNS
 prev_page:
-  url: /cv.html
+  url: /contact.html
   title: |-
-    CV
+    Contact
 next_page:
   url: /research/biomedical.html
   title: |-
     Biomedical Flows
+suffix: .ipynb
+
 comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /content***"
 ---
-<div class="jb_cell">
+
+    <main class="jupyter-page">
+    <div class="jb_cell">
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -26,7 +30,7 @@ comment: "***PROGRAMMATICALLY GENERATED, DO NOT EDIT. SEE ORIGINAL FILES IN /con
 
 <div class="jb_cell tag_popout">
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered tag_popout"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <!-- img src="../images/KHmovie2.gif" width="250"  -->
 
@@ -71,7 +75,7 @@ been presented at several conferences and as invited talks</p>
 
 <div class="jb_cell tag_popout">
 
-<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered tag_popout"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><img src="https://raw.githack.com/spectralDNS/spectralutilities/master/figures/strong_scaling_pencil_col.png" width="300"/></p>
 <p><strong>Strong scaling</strong> of triply periodic Navier-Stokes solver on the Shaheen II supercomputer at KAUST.</p>
@@ -90,6 +94,7 @@ tools like <em>Numpy</em> and <em>MPI for Python</em>. The DNS solver has been t
 transitional Taylor-Green vortex using a computational box of size $2048^3$. Accuracy is, well spectral, and in benchmark tests on the Shaheen II supercomputer at KAUST it has been found to scale well up to 64,000 cores.
 A state-of-the-art spectral channel flow solver that is making extensive use of <em>shenfun</em>, has been described by {% cite mortensen2017spectral %}. Turbulent flow at $Re_{\tau}=2000$ is shown in the movie below.</p>
 <p><img src="https://raw.githack.com/spectralDNS/spectralutilities/master/movies/Re2000_cropped.gif" width="600" /></p>
+<p>With colleagues at the Extreme Computing Research Center (ECRC), King Abdullah University of Science and Technology (KAUST), we have been using <a href="https://github.com/spectralDNS">spectralDNS</a> to investigate time integration of Fourier pseudospectral Direct Numerical Simulations {% cite ketcheson2020 %}. We investigate the use of higher‐order Runge‐Kutta pairs and automatic step size control based on local error estimation. We find that the fifth‐order accurate Runge‐Kutta pair of Bogacki and Shampine gives much greater accuracy at a significantly reduced computational cost.</p>
 <h2 id="Shenfun">Shenfun<a class="anchor-link" href="#Shenfun"> </a></h2><p>With the <a href="https://github.com/spectralDNS/shenfun">shenfun</a> Python module
 {% cite shenfun %} an
 effort is made towards automating the implementation of the spectral Galerkin
@@ -120,8 +125,8 @@ in {% cite mpi4py-fft_joss jpdc_fft %}. Further documentation is found at</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="k">import</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">cos</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">pi</span>
-<span class="kn">from</span> <span class="nn">shenfun</span> <span class="k">import</span> <span class="o">*</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">symbols</span><span class="p">,</span> <span class="n">cos</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">pi</span>
+<span class="kn">from</span> <span class="nn">shenfun</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="o">%</span><span class="k">matplotlib</span> inline
 
@@ -147,13 +152,19 @@ in {% cite mpi4py-fft_joss jpdc_fft %}. Further documentation is found at</p>
 <div class="jb_output_wrapper }}">
 <div class="output_area">
 
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-cb8d9bf15e04&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-green-fg">from</span> sympy <span class="ansi-green-fg">import</span> symbols<span class="ansi-blue-fg">,</span> cos<span class="ansi-blue-fg">,</span> sin<span class="ansi-blue-fg">,</span> pi
+<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-green-fg">from</span> shenfun <span class="ansi-green-fg">import</span> <span class="ansi-blue-fg">*</span>
+<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">import</span> matplotlib<span class="ansi-blue-fg">.</span>pyplot <span class="ansi-green-fg">as</span> plt
+<span class="ansi-green-intense-fg ansi-bold">      4</span> get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_line_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;matplotlib&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;inline&#39;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> 
 
-
-<div class="output_png output_subarea ">
-<img src="../images/research/spectraldns_5_0.png"
->
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;</pre>
 </div>
-
 </div>
 </div>
 </div>
@@ -189,3 +200,6 @@ real-to-real transforms, like discrete cosine or sine transforms. Further docume
 
  
 
+
+    </main>
+    

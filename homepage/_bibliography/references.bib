@@ -667,3 +667,32 @@ year = {2017}
 	url = {https://bitbucket.org/mpi4py/mpi4py/},
 	year = {2017},
 	Bdsk-url-1 = {https://bitbucket.org/mpi4py/mpi4py/}}
+
+@article{ketcheson2020,
+author = {Ketcheson, David I. and Mortensen, Mikael and Parsani, Matteo and Schilling, Nathanael},
+title = {More efficient time integration for Fourier pseudospectral DNS of incompressible turbulence},
+journal = {International Journal for Numerical Methods in Fluids},
+volume = {92},
+number = {2},
+pages = {79-93},
+keywords = {adaptivity, error estimation, incompressible flow, spectral, time integration, turbulent flow},
+doi = {10.1002/fld.4773},
+url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/fld.4773},
+eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/fld.4773},
+abstract = {Summary Time integration of Fourier pseudospectral DNS is usually performed using the classical fourth-order accurate Runge-Kutta method or other second- or third-order methods, with a fixed step size. We investigate the use of higher-order Runge-Kutta pairs and automatic step size control based on local error estimation. We find that the fifth-order accurate Runge-Kutta pair of Bogacki and Shampine gives much greater accuracy at a significantly reduced computational cost. Specifically, we demonstrate speedups of 2× to 10× for the same accuracy. Numerical tests (including the Taylor-Green vortex, Rayleigh-Taylor instability, and homogeneous isotropic turbulence) confirm the reliability and efficiency of the method. We also show that adaptive time stepping provides a significant computational advantage for some problems (like the development of a Rayleigh-Taylor instability) without compromising accuracy.},
+year = {2020}
+}
+
+@article{landet2020,
+title = "Slope limiting the velocity field in a discontinuous Galerkin divergence-free two-phase flow solver",
+journal = "Computers & Fluids",
+volume = "196",
+pages = "104322",
+year = "2020",
+issn = "0045-7930",
+doi = "https://doi.org/10.1016/j.compfluid.2019.104322",
+url = "http://www.sciencedirect.com/science/article/pii/S0045793019302828",
+author = "Tormod Landet and Kent-Andre Mardal and Mikael Mortensen",
+keywords = "DG FEM, Divergence-free, Solenoidal, Navier–Stokes, Two-phase, Slope limiter, Gibbs oscillations, Density jump",
+abstract = "Solving the Navier–Stokes equations when the density field contains a large and sharp discontinuity—such as a water/air free surface—is numerically challenging. Convective instabilities cause Gibbs oscillations which quickly destroy the solution. We investigate the use of slope limiters for the velocity field to overcome this problem in a way that does not compromise on the mass-conservation properties. The equations are discretised using a symmetric interior-penalty discontinuous Galerkin finite element method that is divergence-free to machine precision. A slope limiter made specifically for exactly divergence-free (solenoidal) fields is presented and used to illustrate the difficulties in obtaining convectively stable fields that are also exactly solenoidal. The lessons learned from this are applied in constructing a simpler method based on the use of an existing scalar slope limiter applied to each velocity component. We show by numerical examples how both presented slope limiting methods are vastly superior to the naive non-limited method. The methods can solve difficult two-phase problems with high density-ratios and high Reynolds numbers—typical for marine and offshore water/air simulations—in a way that conserves mass and stops unbounded energy growth caused by the Gibbs phenomenon."
+}

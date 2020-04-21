@@ -42,6 +42,11 @@
   external: true
   not_numbered: true
 
+- title: Contact
+  url: /contact 
+  not_numbered: true 
+  expand_sections: true
+
 # Divider for meta-pages and content page
 - divider: true
 
