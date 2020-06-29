@@ -23,10 +23,10 @@ email: mikaem@math.uio.no
 description: >-
   My personal and professional homepage
 
-baseurl: /mikaem               # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
-#baseurl: ""
-#url: https://mikaem.github.io              # the base hostname & protocol for your site, e.g. http://example.com
-url: http://folk.uio.no              # the base hostname & protocol for your site, e.g. http://example.com
+#baseurl: /mikaem               # the subpath of your site, e.g. /blog. If there is no subpath for your site, use an empty string ""
+baseurl: ""
+url: https://mikaem.github.io              # the base hostname & protocol for your site, e.g. http://example.com
+#url: http://folk.uio.no              # the base hostname & protocol for your site, e.g. http://example.com
 
 
 
